@@ -9,7 +9,7 @@ Text von Kapitel 3.
    $r = \frac{m\cdot v}{q\cdot B}$  & $r = \frac{m\cdot v}{q\cdot B}$& alles gleich 
      
 \end{tabular}
-\textbf{meine Einstellungsparameter:}
+\paragraph{\textbf{meine Einstellungsparameter:}}
 
 \begin{itemize}
     \item Beschleunigungsspannung $U_B$ im Bereich von 12 kV bis 16 kV, zugehöriger Richtungsvektor $\vv{s} = \vektor{1}{0}{0}$
@@ -19,13 +19,19 @@ Text von Kapitel 3.
         \item $B_1$ im Bereich -5 mT bis 5 mT, zugehöriger Richtungsvektor $\vv{b_1} = \vektor{0}{0}{1}$ % senkrechte Spule
         \item $B_2$ im Bereich -5 mT bis 5 mT, zugehöriger Richtungsvektor $\vv{b_2} = \vektor{0}{1}{0}$ % waagerechte Spule
     \end{itemize}
-    
-    \item Felddurchmesser d = 30 in mm
-    \item Masse des Elektrons m =  $9,109 \cdot 10^{-31}$ in kg
-    \item Ladung des Elektrons e = $1,602 \cdot 10^{-19}$ in AS
+
 \end{itemize}
 
-\textbf{meine Zuberechnendeparameter:}
+\textbf{Konstanten:}
+
+\begin{itemize}
+    \item Felddurchmesser $d$ = 30 in mm
+    \item Masse des Elektrons $m$ =  $9,109 \cdot 10^{-31}$ in kg
+    \item Ladung des Elektrons $e$ = $1,602 \cdot 10^{-19}$ in As
+    \item Bildschirmabstand $l$ = 500 % welche Einheit?
+\end{itemize}
+
+\paragraph{\textbf{meine zu berechnenden Parameter:}}
 
 \begin{itemize}
     \item Teilchengeschwindigkeit v in $\frac{km}{s}$
@@ -43,7 +49,7 @@ Das ist im Magneten und hier wird die Ablenkung berechnet.
     \label{fig:ausBlock}
 \end{figure}
 
-\textbf{Die physikalischen Formeln:}
+\paragraph{\textbf{Die physikalischen Formeln:}}
 
 Wie wir in abbildung \ref{fig:ausBlock}.
 
@@ -66,15 +72,19 @@ ablenkungsrichtung
 \end{lstlisting}
 
 Das ist im Strahl und hier wird die Geschwindigkeit berechnet mit welcher dieser aus der Elektronenkanone kommt. 
-\newline \textbf{physikalische Erklärung:}
-\newline Durch den glühelektrischen Effekt werden Elektronen freigesetzt. Dabei wird ein "Wehnelt-Zylinder" durch eine Heizspannung $U_H$ erhitzt. Die nun freien Elektronen werden durch die Kathode( positiver Pol) gebündelt. Dies geschieht dadurch das in der Mitte der Platte ein kleines Loch vorhanden ist durch welches der Elektronenstrahl nun fließt. Um die Geschwindigkeit zu bestimmen muss der Energieerhaltungssatz betrachtet werden. Dabei wird die kinetische Energie und die elektrische Energie gleichgesetzt. Um die elektrische Energie benutzen zu können, wird das Ende des "Wehnelt-Zylinder" als Anode aufgefasst( negativer Pol) und dadurch entsteht ein elektrisches Feld in welchem auch die elektrische Energie vorhanden ist. 
+
+\textbf{physikalische Erklärung:}
+
+Durch den glühelektrischen Effekt werden Elektronen freigesetzt. Dabei wird ein "Wehnelt-Zylinder" durch eine Heizspannung $U_H$ erhitzt. Die nun freien Elektronen werden durch die Kathode( positiver Pol) gebündelt. Dies geschieht dadurch das in der Mitte der Platte ein kleines Loch vorhanden ist durch welches der Elektronenstrahl nun fließt. Um die Geschwindigkeit zu bestimmen muss der Energieerhaltungssatz betrachtet werden. Dabei wird die kinetische Energie und die elektrische Energie gleichgesetzt. Um die elektrische Energie benutzen zu können, wird das Ende des "Wehnelt-Zylinder" als Anode aufgefasst( negativer Pol) und dadurch entsteht ein elektrisches Feld in welchem auch die elektrische Energie vorhanden ist. 
 $$ E_{kin} = E_{el}$$
 $$ \frac{1}{2} \cdot m \cdot v^2 = e \cdot U_B$$
 Diese Formel wird  nun nach v umgestellt:
-\newline \textbf{Die physikalische Formel:}
+\paragraph{\textbf{Die physikalische Formel:}} 
 $$ v = \sqrt{\frac{2 \cdot e \cdot U_B}{m}}$$
-\newline \textbf{Erklärung/ Umsetzung der Physik im Code:}
-\newline Im Folgenden ist der Code in der Simulation dargestellt. Zu sehen ist, dass die oben genannte Formel benutzt wird und die jeweiligen Attribute aus den zugehörigen Klassen geholt werden. Hier muss sich die Spannung $U_B$ aus der Elektronenkanone( quelle ) geholt werden. Des Weiteren wird die Spannung mit 1000 multipliziert, da in der Formel mit V gerechnet wird, während die Spannung der Elektronenkanone in kV angegeben ist. Deswegen muss diese noch umgerechnet werden.
+
+\textbf{Erklärung/ Umsetzung der Physik im Code:}
+
+Im Folgenden ist der Code in der Simulation dargestellt. Zu sehen ist, dass die oben genannte Formel benutzt wird und die jeweiligen Attribute aus den zugehörigen Klassen geholt werden. Hier muss sich die Spannung $U_B$ aus der Elektronenkanone( quelle ) geholt werden. Des Weiteren wird die Spannung mit 1000 multipliziert, da in der Formel mit V gerechnet wird, während die Spannung der Elektronenkanone in kV angegeben ist. Deswegen muss diese noch umgerechnet werden.
 \begin{lstlisting}
 teilchengeschwindigkeit 
   = Math.sqrt(2 
@@ -85,7 +95,8 @@ teilchengeschwindigkeit
 \end{lstlisting}
 
 Hier wird der Punkt auf dem Bildschirm berechnet.
-\newline \textbf{Die physikalische Formel:}
+
+\textbf{Die physikalische Formel:}
 $$ \vv{v} = \vv{v} + \vv{a} \cdot l \cdot \tan(\alpha)$$
 \begin{lstlisting}
 Vektor ergebnisvektor 
