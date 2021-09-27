@@ -102,7 +102,7 @@
                 labelfont=bf,
                 margin=2em]{caption}            % create graphics/
                                                 % tabular captions
-\usepackage{subcaption}                         % create subcaptions
+%\usepackage{subcaption}                         % create subcaptions
                                                 % for subpictures
 
 \usepackage[absolute,overlay]{textpos}          % used for titlepage
