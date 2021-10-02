@@ -1,15 +1,5 @@
-Text von Kapitel 3.
-\section{\textbf{Herleitung von Winkel}}
-
-\begin{tabular}{c|c|c}
-     Formel Buch & Formel Block & Anmerkungen  \\
-     \hline
-    $\alpha = \frac{d}{r}$ &$\tan(\frac{\alpha}{2}) = \frac{d}{2\cdot r}$& wegen Kleinwinkelnäherung bei dem Buch \\
-    \hline
-   $r = \frac{m\cdot v}{q\cdot B}$  & $r = \frac{m\cdot v}{q\cdot B}$& alles gleich 
-     
-\end{tabular}
-\paragraph{\textbf{meine Einstellungsparameter:}}
+\section{Experimenteller Aufbau}
+\paragraph{meine Einstellungsparameter:}
 
 \begin{itemize}
     \item Beschleunigungsspannung $U_B$ im Bereich von 12 kV bis 16 kV, zugehöriger Richtungsvektor $\vv{s} = \vektor{1}{0}{0}$
@@ -22,16 +12,16 @@ Text von Kapitel 3.
 
 \end{itemize}
 
-\textbf{Konstanten:}
+\paragraph{Konstanten:}
 
 \begin{itemize}
     \item Felddurchmesser $d$ = 30 in mm
     \item Masse des Elektrons $m$ =  $9,109 \cdot 10^{-31}$ in kg
     \item Ladung des Elektrons $e$ = $1,602 \cdot 10^{-19}$ in As
-    \item Bildschirmabstand $l$ = 500 % welche Einheit?
+    \item Bildschirmabstand $l$ = 500 in mm
 \end{itemize}
 
-\paragraph{\textbf{meine zu berechnenden Parameter:}}
+\paragraph{meine zu berechnenden Parameter:}
 
 \begin{itemize}
     \item Teilchengeschwindigkeit v in $\frac{km}{s}$
@@ -41,6 +31,22 @@ Text von Kapitel 3.
     \item Ablenkungsrichtung $\vv{a}$
 \end{itemize}
 
+\section{Berechnung der Elektronenkanone}
+
+\section{Lorentzkraft und Ablenkung}
+
+\section{Geometrische Bestimmung des Winkels}
+
+\begin{tabular}{c|c|c}
+     Formel Buch & Formel Block & Anmerkungen  \\
+     \hline
+    $\alpha = \frac{d}{r}$ &$\tan(\frac{\alpha}{2}) = \frac{d}{2\cdot r}$& wegen Kleinwinkelnäherung bei dem Buch \\
+    \hline
+   $r = \frac{m\cdot v}{q\cdot B}$  & $r = \frac{m\cdot v}{q\cdot B}$& alles gleich 
+     
+\end{tabular}
+
+
 Das ist im Magneten und hier wird die Ablenkung berechnet.
 \begin{figure}
     \centering
@@ -49,7 +55,7 @@ Das ist im Magneten und hier wird die Ablenkung berechnet.
     \label{fig:ausBlock}
 \end{figure}
 
-\paragraph{\textbf{Die physikalischen Formeln:}}
+\paragraph{Die physikalischen Formeln:}
 
 Wie wir in abbildung \ref{fig:ausBlock}.
 
@@ -79,7 +85,7 @@ Durch den glühelektrischen Effekt werden Elektronen freigesetzt. Dabei wird ein
 $$ E_{kin} = E_{el}$$
 $$ \frac{1}{2} \cdot m \cdot v^2 = e \cdot U_B$$
 Diese Formel wird  nun nach v umgestellt:
-\paragraph{\textbf{Die physikalische Formel:}} 
+\paragraph{Die physikalische Formel:} 
 $$ v = \sqrt{\frac{2 \cdot e \cdot U_B}{m}}$$
 
 \textbf{Erklärung/ Umsetzung der Physik im Code:}
