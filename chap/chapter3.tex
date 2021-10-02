@@ -1,4 +1,5 @@
 \section{Experimenteller Aufbau}
+
 \paragraph{meine Einstellungsparameter:}
 
 \begin{itemize}
@@ -32,6 +33,28 @@
 \end{itemize}
 
 \section{Berechnung der Elektronenkanone}
+Das ist im Strahl und hier wird die Geschwindigkeit berechnet mit welcher dieser aus der Elektronenkanone kommt. 
+
+\subsection{physikalische Erklärung:}
+
+Durch den glühelektrischen Effekt werden Elektronen freigesetzt. Dabei wird ein "Wehnelt-Zylinder" durch eine Heizspannung $U_H$ erhitzt. Die nun freien Elektronen werden durch die Kathode( positiver Pol) gebündelt. Dies geschieht dadurch das in der Mitte der Platte ein kleines Loch vorhanden ist durch welches der Elektronenstrahl nun fließt. Um die Geschwindigkeit zu bestimmen muss der Energieerhaltungssatz betrachtet werden. Dabei wird die kinetische Energie und die elektrische Energie gleichgesetzt. Um die elektrische Energie benutzen zu können, wird das Ende des "Wehnelt-Zylinder" als Anode aufgefasst( negativer Pol) und dadurch entsteht ein elektrisches Feld in welchem auch die elektrische Energie vorhanden ist. 
+$$ E_{kin} = E_{el}$$
+$$ \frac{1}{2} \cdot m \cdot v^2 = e \cdot U_B$$
+Diese Formel wird  nun nach v umgestellt:
+\subsection{Die physikalische Formel:} 
+$$ v = \sqrt{\frac{2 \cdot e \cdot U_B}{m}}$$
+
+\subsection{Erklärung/ Umsetzung der Physik im Code:}
+
+Im Folgenden ist der Code in der Simulation dargestellt. Zu sehen ist, dass die oben genannte Formel benutzt wird und die jeweiligen Attribute aus den zugehörigen Klassen geholt werden. Hier muss sich die Spannung $U_B$ aus der Elektronenkanone( quelle ) geholt werden. Des Weiteren wird die Spannung mit 1000 multipliziert, da in der Formel mit V gerechnet wird, während die Spannung der Elektronenkanone in kV angegeben ist. Deswegen muss diese noch umgerechnet werden.
+\begin{lstlisting}
+teilchengeschwindigkeit 
+  = Math.sqrt(2 
+  * elektronenladung 
+  * quelle.spannung 
+  * 1000 
+  / elektronenmasse);
+\end{lstlisting}
 
 \section{Lorentzkraft und Ablenkung}
 
@@ -77,28 +100,6 @@ ablenkungsrichtung
     kreuzprodukt(this.richtungsvektor);
 \end{lstlisting}
 
-Das ist im Strahl und hier wird die Geschwindigkeit berechnet mit welcher dieser aus der Elektronenkanone kommt. 
-
-\textbf{physikalische Erklärung:}
-
-Durch den glühelektrischen Effekt werden Elektronen freigesetzt. Dabei wird ein "Wehnelt-Zylinder" durch eine Heizspannung $U_H$ erhitzt. Die nun freien Elektronen werden durch die Kathode( positiver Pol) gebündelt. Dies geschieht dadurch das in der Mitte der Platte ein kleines Loch vorhanden ist durch welches der Elektronenstrahl nun fließt. Um die Geschwindigkeit zu bestimmen muss der Energieerhaltungssatz betrachtet werden. Dabei wird die kinetische Energie und die elektrische Energie gleichgesetzt. Um die elektrische Energie benutzen zu können, wird das Ende des "Wehnelt-Zylinder" als Anode aufgefasst( negativer Pol) und dadurch entsteht ein elektrisches Feld in welchem auch die elektrische Energie vorhanden ist. 
-$$ E_{kin} = E_{el}$$
-$$ \frac{1}{2} \cdot m \cdot v^2 = e \cdot U_B$$
-Diese Formel wird  nun nach v umgestellt:
-\paragraph{Die physikalische Formel:} 
-$$ v = \sqrt{\frac{2 \cdot e \cdot U_B}{m}}$$
-
-\textbf{Erklärung/ Umsetzung der Physik im Code:}
-
-Im Folgenden ist der Code in der Simulation dargestellt. Zu sehen ist, dass die oben genannte Formel benutzt wird und die jeweiligen Attribute aus den zugehörigen Klassen geholt werden. Hier muss sich die Spannung $U_B$ aus der Elektronenkanone( quelle ) geholt werden. Des Weiteren wird die Spannung mit 1000 multipliziert, da in der Formel mit V gerechnet wird, während die Spannung der Elektronenkanone in kV angegeben ist. Deswegen muss diese noch umgerechnet werden.
-\begin{lstlisting}
-teilchengeschwindigkeit 
-  = Math.sqrt(2 
-  * elektronenladung 
-  * quelle.spannung 
-  * 1000 
-  / elektronenmasse);
-\end{lstlisting}
 
 Hier wird der Punkt auf dem Bildschirm berechnet.
 
