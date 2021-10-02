@@ -82,19 +82,13 @@ Dies lässt sich nun nach $r$ umstellen und man erhält die Formel \ref{eq:r}.
 
 \subsection{Erklärung/Umsetzung der Physik im Code:}
 
-Im Folgenden ist der Code in der Simulation dargestellt. Hier wird zuerst ebenfalls der \lstinline$Bahnradius$ berechnet, dies geschieht dadurch, dass die Elektronenmasse und die zuvor berechnete Teilchengeschwindigkeit mit aus dem Strahl geholt werden und miteinander multipliziert werden. Des Weiteren wird dieses Ergebnis durch die Elektronenladung und der Magnetfeldstärke mal 1000 dividiert. Die Elektronenladung wird sich ein weiteres mal aus der Klasse Strahl geholt, wo sie gespeichert wurde. Bei der Berechnung des Winkels $\alpha$ wird die oben %Verweis möglich?
-bereits genannte Formel mit zwei multipliziert da auf der Ausgabe der tatsächliche Winkel $\alpha$ zu sehen sein soll. Des Winkel $\alpha$ wird im Bogenmaß berechnet. Bei der \lstinline$Ablenkungsrichtung$ wird der Richtungsvektor des Strahl mit $-1$ multipliziert und danach das Kreuzprodukt mit dem Richtungsvektor des Ablenkspulenpaars genommen. Durch den Befehl \lstinline$this.richtungsvektor$ wird auf den Richtungsvektor des jeweiligen Magnetes verwiesen. Des Weiteren ist noch hinzuzufügen, dass die Berechnung jedes Ablenkspulenpaar für sich macht uns daher auch eigene Werte für \lstinline$alpha$, den \lstinline$Bahnradius$ und die \lstinline$Ablenkungsrichtung$ hat.
+Im Folgenden ist der Code in der Simulation dargestellt. Hier wird zuerst ebenfalls der \lstinline$Bahnradius$ berechnet, dies geschieht dadurch, dass die Elektronenmasse und die zuvor berechnete Teilchengeschwindigkeit mit aus dem Strahl geholt werden und miteinander multipliziert werden. Des Weiteren wird dieses Ergebnis durch die Elektronenladung und der Magnetfeldstärke mal 1000 dividiert. Die Elektronenladung wird sich ein weiteres mal aus der Klasse Strahl geholt, wo sie gespeichert wurde.
 \begin{lstlisting}
 bahnradius
   = strahl.elektronenmasse
     * strahl.teilchengeschwindigkeit
     / (strahl.elektronenladung * magnetfeldstaerke/1000)
     * 1000;
-alpha = 2 * Math.atan(felddurchmesser/ (2 *bahnradius ));
-ablenkungsrichtung
-  = strahl.quelle.richtungsvektor.
-    multiplizieren(-1).
-    kreuzprodukt(this.richtungsvektor);
 \end{lstlisting}
 
 \section{Geometrische Bestimmung des Winkels}
@@ -118,17 +112,25 @@ Die Formel (2) hingegen lässt sich dadurch herleiten, dass wie in Abbildung \re
 \end{equation}
 
 \subsection{Erklärung/Umsetzung der Physik im Code:}
+ Bei der Berechnung des Winkels $\alpha$ wird die oben %Verweis möglich?
+bereits genannte Formel mit zwei multipliziert da auf der Ausgabe der tatsächliche Winkel $\alpha$ zu sehen sein soll. Des Winkel $\alpha$ wird im Bogenmaß berechnet. Bei der \lstinline$Ablenkungsrichtung$ wird der Richtungsvektor des Strahl mit $-1$ multipliziert und danach das Kreuzprodukt mit dem Richtungsvektor des Ablenkspulenpaars genommen. Durch den Befehl \lstinline$this.richtungsvektor$ wird auf den Richtungsvektor des jeweiligen Magnetes verwiesen. Des Weiteren ist noch hinzuzufügen, dass die Berechnung jedes Ablenkspulenpaar für sich macht uns daher auch eigene Werte für \lstinline$alpha$, den \lstinline$Bahnradius$ und die \lstinline$Ablenkungsrichtung$ hat.
 \begin{lstlisting}
-Vektor ergebnisvektor 
-  = new Vektor(bildschirmabstand,0,0);
-    for(Magnet m : getWorld().getObjects(Magnet.class) )
-        {
-            ergebnisvektor 
-            = ergebnisvektor.addieren( m.ablenkungsrichtung.
-            multiplizieren(bildschirmabstand).
-            multiplizieren(Math.tan(m.alpha)));
-        }
-    return ergebnisvektor;
+alpha = 2 * Math.atan(felddurchmesser/ (2 *bahnradius ));
+ablenkungsrichtung
+  = strahl.quelle.richtungsvektor.
+    multiplizieren(-1).
+    kreuzprodukt(this.richtungsvektor);
+
+Vektor ergebnisvektor = new Vektor(bildschirmabstand,0,0);
+    for(Ablenkspulenpaar m : getWorld().getObjects(Ablenkspulenpaar.class) )
+    {
+        ergebnisvektor 
+        = ergebnisvektor.addieren( m.ablenkungsrichtung.
+        multiplizieren(bildschirmabstand).
+        multiplizieren(Math.tan(m.alpha)));
+    }
+return ergebnisvektor;
+
 \end{lstlisting}
 
 \begin{tabular}{c|c|c}
