@@ -73,21 +73,12 @@ $$ e \cdot v \cdot B = \frac{m \cdot v^2}{r}$$
 Dies lässt sich nun nach $r$ umstellen und man erhält die Formel \ref{eq:r}. Die Formel (2) hingegen lässt sich dadurch herleiten, dass wie in Abbildung \ref{fig:ausBlock} zu sehen ist, durch Trigonometrie der Winkel $\alpha$ herleiten lässt. Durch die Abbildung \ref{fig:ausBlock} wird allerdings nur $\frac{\alpha}{2}$ errechenbar. Durch den Tangens von der Gegenkathete( $ \frac{d}{2}$) und der Ankathete ($ r $) lässt sich $ \frac{\alpha}{2}$ herleiten. Bei Formel (3) wird die Ablenkungsrichtung des Strahls berechnet. Da die linken Hand regel, welche für einen positiven Ladungsträger vorgesehen ist, unserer Ladungsträger(Elektronen) allerdings negativ sind, muss eben jener umgedreht werden und dies wird durch die Multiplikation mit $ -1 $ erreicht. Darauf folgend muss das Kreuzprodukt mit dem Vektor des Magnetfeldes genommen werden.  
 
 \subsection{Die physikalische Formel:}
-%\url{https://www.physikerboard.de/ptopic,342494.html#342494}
+\url{https://www.physikerboard.de/ptopic,342494.html#342494}
 \begin{equation}
      \label{eq:r}
      r = \frac{m \cdot v}{e \cdot B}
 \end{equation}
 
-\begin{equation}
-    \label{eq:tan}
-    \tan(\frac{\alpha}{2}) = \frac{d}{2 \cdot r}
-\end{equation}
-
-\begin{equation}
-    \label{eq:a}
-    \vv{a} = \vv{s} \cdot (-1) \times \vv{b}
-\end{equation}
 
 \subsection{Erklärung/Umsetzung der Physik im Code:}
 
@@ -111,7 +102,20 @@ ablenkungsrichtung
 Hier wird der Punkt auf dem Bildschirm berechnet.
 \subsection{physikalische Erklärung:}
 \subsection{Die physikalische Formel:}
-$$ \vv{v} = \vv{v} + \vv{a} \cdot l \cdot \tan(\alpha)$$
+\begin{equation}
+    \label{eq:tan}
+    \tan(\frac{\alpha}{2}) = \frac{d}{2 \cdot r}
+\end{equation}
+
+\begin{equation}
+    \label{eq:a}
+    \vv{a} = \vv{s} \cdot (-1) \times \vv{b}
+\end{equation}
+\begin{equation}
+    \label{eq:v}
+    \vv{v} = \vv{v} + \vv{a} \cdot l \cdot \tan(\alpha)
+\end{equation}
+
 \subsection{Erklärung/Umsetzung der Physik im Code:}
 \begin{lstlisting}
 Vektor ergebnisvektor 
