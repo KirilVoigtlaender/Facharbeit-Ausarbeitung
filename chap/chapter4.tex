@@ -12,8 +12,7 @@ $$(z-100\mbox{ bis }100$$
 $$x = \sqrt{\frac{1}{6}}$$
 $$y = \sqrt{\frac{2}{3}}$$
 $$z = -\sqrt{\frac{1}{6}}$$
-$$\vv{a}=\left(\begin{array}{c} 
-     \sqrt{\frac{1}{6}}\\ \sqrt{\frac{2}{3}}\\-\sqrt{\frac{1}{6}}\end{array}\right) $$
+$$\vv{a}=\vektor{\sqrt{\frac{1}{6}}}{\sqrt{\frac{2}{3}}}{-\sqrt{\frac{1}{6}}} $$
 x, y sollen positiv sein, z soll negativ sein und der Betrag/Länge soll eins sein. X etwas kleiner als y.
 $$y= \sqrt{\frac{2}{3}}$$
 $$x= \sqrt{\frac{1}{6}}$$
@@ -26,25 +25,19 @@ $$|\vv{b}| = \sqrt{\frac{5}{6}}\neq 1\mbox{ ; also müssen x und y mit dem Kehrw
 $$x' = \sqrt{\frac{12}{15}} = \sqrt{\frac{4}{5}}$$
 $$y' = - \sqrt{\frac{1}{5}}$$
 $$z' = 0$$
-$$\vv{b}=\left(\begin{array}{c} 
-      \sqrt{\frac{4}{5}}\\ -\sqrt{\frac{1}{5}}\\0\end{array}\right) $$
+$$\vv{b}= \vektor{\sqrt{\frac{4}{5}}}{-\sqrt{\frac{1}{5}}}{0}$$
 \underline{c:}
 $$\vv{c} = \vv{b}\times  \vv{a}$$
-$$= \left(\begin{array}{c} 
-     \sqrt{\frac{4}{5}}\\-\sqrt{\frac{1}{5}}\\0\end{array}\right)
-      \times \left(\begin{array}{c} 
-     \sqrt{\frac{1}{6}}\\\sqrt{\frac{2}{3}}\\-\sqrt{\frac{1}{6}}\end{array}\right) \mbox{ = } 
+$$= \vektor{\frac{4}{5}}{-\sqrt{\frac{1}{5}}}{0}
+      \times \vektor{\sqrt{\frac{1}{6}}}{\sqrt{\frac{2}{3}}}{-\sqrt{\frac{1}{6}}} \mbox{ = } 
      \left(\begin{array}{c} 
      \frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\\2\cdot\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\\2\cdot\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}+\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\end{array}\right)
 $$
 Wir suchen eine Matrix A, sodass
 
-     $$A\cdot \vv{a}=\left(\begin{array}{c} 
-     0\\1\\0\end{array}\right)\mbox{ ist ;} $$
-     $$A\cdot \vv{b}=\left(\begin{array}{c} 
-     1\\0\\0\end{array}\right)\mbox{ ist ;} $$
-     $$A\cdot \vv{c}=\left(\begin{array}{c} 
-     0\\0\\1\end{array}\right)\mbox{ ist ;} $$
+     $$A\cdot \vv{a}=\vektor{0}{1}{0}\mbox{ ist ;} $$
+     $$A\cdot \vv{b}=\vektor{1}{0}{0}\mbox{ ist ;}$$
+     $$A\cdot \vv{c}=\vektor{0}{0}{1}\mbox{ ist ;} $$
      
 $$\mbox{B = } \left(\begin{array}{ccc}
 2\cdot\frac{\sqrt{5}}{5}&\frac{1}{6}\sqrt{6}&\frac{1}{30}\sqrt{30}\\
