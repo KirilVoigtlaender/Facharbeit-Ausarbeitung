@@ -46,7 +46,7 @@ $$ v = \sqrt{\frac{2 \cdot e \cdot U_B}{m}}$$
 
 \subsection{Erklärung/Umsetzung der Physik im Code:}
 
-Im Folgenden ist der Code in der Simulation dargestellt. Zu sehen ist, dass die oben genannte Formel benutzt wird und die jeweiligen Attribute aus den zugehörigen Klassen geholt werden. Hier muss sich die Spannung $U_B$ aus der Elektronenkanone( quelle ) geholt werden. Des Weiteren wird die Spannung mit 1000 multipliziert, da in der Formel mit V gerechnet wird, während die Spannung der Elektronenkanone in kV angegeben ist. Deswegen muss diese noch umgerechnet werden.
+Im Folgenden ist der Code in der Simulation dargestellt. Zu sehen ist, dass die oben genannte Formel benutzt wird und die jeweiligen Attribute aus den zugehörigen Klassen geholt werden. Hier muss sich die Spannung $U_B$ aus der Elektronenkanone(\lstinline $ quelle $) geholt werden. Des Weiteren wird die Spannung mit 1000 multipliziert, da in der Formel mit V gerechnet wird, während die Spannung der Elektronenkanone in kV angegeben ist. Deswegen muss diese noch umgerechnet werden.
 \begin{lstlisting}
 teilchengeschwindigkeit 
   = Math.sqrt(2 
@@ -67,14 +67,20 @@ Das ist im Magneten und hier wird die Ablenkung berechnet.
 \end{figure}
 
 \subsection{physikalische Erklärung:}
+Den Radius $r$ wird dadurch berechnet, dass die Lorentzkraft und die Zentripetalkraft gleichgestellt werden. Dies kann so gemacht werden, da die Lorentzkraft die magnetische Kraft darstellt, welche im Magnetfeld vorherrscht. Die Zentripetalkraft hingegen kann benutzt werden, weil die Elektronen im Magnetfeld auf einer Kreisbahn abgelenkt werden, welche durch die Zentripetalkraft dargestellt wird. Dadurch leitet sich ab:
+$$ F_m=F_z$$
+$$ e \cdot v \cdot B = \frac{m \cdot v^2}{r}$$
+Dies lässt sich nun nach $r$ umstellen und man erhält die Formel (1). Die Formel (2) hingegen lässt sich dadurch herleiten, dass wie in Abbildung \ref{fig:ausBlock} zu sehen ist, durch Trigonometrie der Winkel $\alpha$ herleiten lässt. Durch die Abbildung \ref{fig:ausBlock} wird allerdings nur $\frac{\alpha}{2}$ errechenbar. Durch den Tangens von der Gegenkathete( $ \frac{d}{2}$) und der Ankathete ($ r $) lässt sich $ \frac{\alpha}{2}$ herleiten. Bei Formel (3) wird die Ablenkungsrichtung des Strahls berechnet. Da die linken Hand regel, welche für einen positiven Ladungsträger vorgesehen ist, unserer Ladungsträger(Elektronen) allerdings negativ sind, muss eben jener umgedreht werden und dies wird durch die Multiplikation mit $ -1 $ erreicht. Darauf folgend muss das Kreuzprodukt mit dem Vektor des Magnetfeldes genommen werden.  
+Wie wir in Abbildung \ref{fig:ausBlock}.
 \subsection{Die physikalische Formel:}
-Wie wir in abbildung \ref{fig:ausBlock}.
 
-\url{https://www.physikerboard.de/ptopic,342494.html#342494}
 
-$$ r = \frac{m \cdot v}{e \cdot B}$$
-$$ \tan(\frac{\alpha}{2}) = \frac{d}{2 \cdot r}$$
-$$ \vv{a} = \vv{s} \cdot (-1) \times \vv{b}$$
+
+%\url{https://www.physikerboard.de/ptopic,342494.html#342494}
+
+$$\mbox{ (1) } r = \frac{m \cdot v}{e \cdot B}$$
+$$\mbox{ (2) } \tan(\frac{\alpha}{2}) = \frac{d}{2 \cdot r}$$
+$$\mbox{ (3) } \vv{a} = \vv{s} \cdot (-1) \times \vv{b}$$
 
 \subsection{Erklärung/Umsetzung der Physik im Code:}
 \begin{lstlisting}
