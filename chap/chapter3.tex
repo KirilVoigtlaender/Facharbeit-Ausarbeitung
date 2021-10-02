@@ -44,7 +44,7 @@ Diese Formel wird  nun nach v umgestellt:
 \subsection{Die physikalische Formel:} 
 $$ v = \sqrt{\frac{2 \cdot e \cdot U_B}{m}}$$
 
-\subsection{Erklärung/ Umsetzung der Physik im Code:}
+\subsection{Erklärung/Umsetzung der Physik im Code:}
 
 Im Folgenden ist der Code in der Simulation dargestellt. Zu sehen ist, dass die oben genannte Formel benutzt wird und die jeweiligen Attribute aus den zugehörigen Klassen geholt werden. Hier muss sich die Spannung $U_B$ aus der Elektronenkanone( quelle ) geholt werden. Des Weiteren wird die Spannung mit 1000 multipliziert, da in der Formel mit V gerechnet wird, während die Spannung der Elektronenkanone in kV angegeben ist. Deswegen muss diese noch umgerechnet werden.
 \begin{lstlisting}
@@ -58,18 +58,6 @@ teilchengeschwindigkeit
 
 \section{Lorentzkraft und Ablenkung}
 
-\section{Geometrische Bestimmung des Winkels}
-
-\begin{tabular}{c|c|c}
-     Formel Buch & Formel Block & Anmerkungen  \\
-     \hline
-    $\alpha = \frac{d}{r}$ &$\tan(\frac{\alpha}{2}) = \frac{d}{2\cdot r}$& wegen Kleinwinkelnäherung bei dem Buch \\
-    \hline
-   $r = \frac{m\cdot v}{q\cdot B}$  & $r = \frac{m\cdot v}{q\cdot B}$& alles gleich 
-     
-\end{tabular}
-
-
 Das ist im Magneten und hier wird die Ablenkung berechnet.
 \begin{figure}
     \centering
@@ -78,8 +66,8 @@ Das ist im Magneten und hier wird die Ablenkung berechnet.
     \label{fig:ausBlock}
 \end{figure}
 
-\paragraph{Die physikalischen Formeln:}
-
+\subsection{physikalische Erklärung:}
+\subsection{Die physikalische Formel:}
 Wie wir in abbildung \ref{fig:ausBlock}.
 
 \url{https://www.physikerboard.de/ptopic,342494.html#342494}
@@ -87,6 +75,8 @@ Wie wir in abbildung \ref{fig:ausBlock}.
 $$ r = \frac{m \cdot v}{e \cdot B}$$
 $$ \tan(\frac{\alpha}{2}) = \frac{d}{2 \cdot r}$$
 $$ \vv{a} = \vv{s} \cdot (-1) \times \vv{b}$$
+
+\subsection{Erklärung/Umsetzung der Physik im Code:}
 \begin{lstlisting}
 bahnradius
   = strahl.elektronenmasse
@@ -100,11 +90,13 @@ ablenkungsrichtung
     kreuzprodukt(this.richtungsvektor);
 \end{lstlisting}
 
+\section{Geometrische Bestimmung des Winkels}
 
 Hier wird der Punkt auf dem Bildschirm berechnet.
-
-\textbf{Die physikalische Formel:}
+\subsection{physikalische Erklärung:}
+\subsection{Die physikalische Formel:}
 $$ \vv{v} = \vv{v} + \vv{a} \cdot l \cdot \tan(\alpha)$$
+\subsection{Erklärung/Umsetzung der Physik im Code:}
 \begin{lstlisting}
 Vektor ergebnisvektor 
   = new Vektor(bildschirmabstand,0,0);
@@ -117,4 +109,26 @@ Vektor ergebnisvektor
         }
     return ergebnisvektor;
 \end{lstlisting}
+
+\begin{tabular}{c|c|c}
+     Formel Buch & Formel Block & Anmerkungen  \\
+     \hline
+    $\alpha = \frac{d}{r}$ &$\tan(\frac{\alpha}{2}) = \frac{d}{2\cdot r}$& wegen Kleinwinkelnäherung bei dem Buch \\
+    \hline
+   $r = \frac{m\cdot v}{q\cdot B}$  & $r = \frac{m\cdot v}{q\cdot B}$& alles gleich 
+     
+\end{tabular}
+
+
+
+
+
+
+
+
+
+
+
+
+
  
