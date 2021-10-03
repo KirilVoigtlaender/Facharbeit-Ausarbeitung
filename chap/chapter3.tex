@@ -158,15 +158,15 @@ Nun ist der Vektor $\vv{v_{diff}}$ zweimal vorhanden, einmal für das senkrechte
 
 \subsection{Erklärung/Umsetzung der Physik im Code:}
 
-Bei der Berechnung des Winkels $\alpha$ wird die oben bereits genannte Formel \ref{eq:tan} mit zwei multipliziert da auf der Ausgabe der tatsächliche Winkel $\alpha$ zu sehen sein soll.
+Bei der Berechnung des Winkels $\alpha$ wird der arctans der oben bereits genannte Formel \ref{eq:tan} genommen und mit zwei multipliziert, da auf der Ausgabe der tatsächliche Winkel $\alpha$ zu sehen sein soll.
 Des Winkel $\alpha$ wird im Bogenmaß berechnet.
-Bei der \lstinline$Ablenkungsrichtung$ wird der Richtungsvektor des Strahl mit $-1$ multipliziert und danach das Kreuzprodukt mit dem Richtungsvektor des Ablenkspulenpaars genommen.
+Bei der \lstinline$Ablenkungsrichtung$ wird der Richtungsvektor des Strahl mit $-1$ multipliziert und danach das Kreuzprodukt mit dem Richtungsvektor des Ablenkspulenpaars genommen, wie bereits in Formel \ref{eq:a} genannt.
 Durch den Befehl \lstinline$this.richtungsvektor$ wird auf den Richtungsvektor des jeweiligen Magnetes verwiesen.
 Des Weiteren ist noch hinzuzufügen, dass die Berechnung jedes Ablenkspulenpaar für sich macht uns daher auch eigene Werte für \lstinline$alpha$, den \lstinline$Bahnradius$ und die \lstinline$Ablenkungsrichtung$ hat.
 Der \lstinline$Ergebnisvektor$ ist ein Vektor der gespeichert wird und später dafür verwendet wird, dass der Strahl vom Magneten zu dem Vektor auf dem Bildschirm gezeichnet wird.
 Durch den for Befehl wird bewirkt, dass wie oben bereits genannt die Berechnung des \lstinline$Ergebnisvektors$ für jeden der Magneten gemacht werden muss.
-Dies bedeutet, dass der \lstinline$Ergebnisvektor$, welcher zu Beginn auf\lstinline$bildschirmabstand$ als x- Koordinate, $0$ als y-Koordinate und 0 als z-Koordinate gesetzt ist, erst die Formel \ref{eq:v} benutzt wird, dieses Ergebnis wird dann als \lstinline$Ergebnisvektor$ gespeichert.
-Danach wird die Formel \ref{eq:v} erneut benutzt, allerdings ist der \lstinline$Ergebnisvektor$ nun der Vektor, welcher im Schritt davor als Ergebnis rausgekommen ist.
+Dies bedeutet, dass der \lstinline$Ergebnisvektor$, welcher zu Beginn auf\lstinline$bildschirmabstand$ als x- Koordinate, $0$ als y-Koordinate und 0 als z-Koordinate gesetzt ist, erst die Formel \ref{eq:v} benutzt wird und addiert wird.
+Danach wird die Formel \ref{eq:v} erneut benutzt und erneut addiert. Dies führt dazu, dass der Punkt auf dem Schirm E nun berechnet ist.
 
 \begin{lstlisting}
 alpha = 2 * Math.atan(felddurchmesser/ (2 *bahnradius ));
