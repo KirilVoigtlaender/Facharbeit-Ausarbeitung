@@ -59,12 +59,7 @@ teilchengeschwindigkeit
 \section{Lorentzkraft und Ablenkung}
 
 Das ist im Magneten und hier wird die Ablenkung berechnet.
-\begin{figure}
-    \centering
-    \includegraphics[width=.75\textwidth]{fig/elektronenstrahl-ablenkung_101.jpg}
-    \caption{Skizze für Winkelberechnung}
-    \label{fig:ausBlock}
-\end{figure}
+
 
 \subsection{physikalische Erklärung:}
 Das Magnetfeld der Ablenkspulenpaare ist homogen und steht senkrecht zu der Bewegungsrichtung der Elektronen. Die Elektronen kommen mit einer gewissen Geschwindigkeit $v$ aus der Elektronenkanone heraus und diese bleibt auch im weiteren Verlauf konstant. Dies bedeutet, dass die Lorentzkraft $F_L$ stets senkrecht zur Bewegungsrichtung der Elektronen wirkt und ihr Betrag dadurch konstant bleibt. Dies bedeutet, dass Sie deswegen als Zentripetalkraft auf die Elektronen wird und diese dadurch auf eine Kreisbahn zwingt. Wie bereits beschrieben, wirkt die Lorentzkraft als Zentripetalkraft immer senkrecht auf die Bewegungsrichtung der Elektronen. Dies bedeutet, dass die Kraftkomponente in Bewegungsrichtung nicht vorhanden ist und die Geschwindigkeit deswegen konstant bleibt. Dadurch leitet sich ab: 
@@ -73,7 +68,7 @@ $$ e \cdot v \cdot B = \frac{m \cdot v^2}{r}$$
 Dies lässt sich nun nach $r$ umstellen und man erhält die Formel \ref{eq:r}.   
 
 \subsection{Die physikalische Formel:}
-\url{https://www.physikerboard.de/ptopic,342494.html#342494}
+
 \begin{equation}
      \label{eq:r}
      r = \frac{m \cdot v}{e \cdot B}
@@ -94,18 +89,26 @@ bahnradius
 \section{Geometrische Bestimmung des Winkels}
 
 Hier wird der Punkt auf dem Bildschirm berechnet.
-\subsection{physikalische Erklärung:}
-Die Formel (2) hingegen lässt sich dadurch herleiten, dass wie in Abbildung \ref{fig:ausBlock} zu sehen ist, durch Trigonometrie der Winkel $\alpha$ herleiten lässt. Durch die Abbildung \ref{fig:ausBlock} wird allerdings nur $\frac{\alpha}{2}$ errechenbar. Durch den Tangens von der Gegenkathete( $ \frac{d}{2}$) und der Ankathete ($ r $) lässt sich $ \frac{\alpha}{2}$ herleiten. Bei Formel (3) wird die Ablenkungsrichtung des Strahls berechnet. Da die linken Hand regel, welche für einen positiven Ladungsträger vorgesehen ist, unserer Ladungsträger(Elektronen) allerdings negativ sind, muss eben jener umgedreht werden und dies wird durch die Multiplikation mit $ -1 $ erreicht. Darauf folgend muss das Kreuzprodukt mit dem Vektor des Magnetfeldes genommen werden.
-\subsection{Die physikalische Formel:}
+\subsection{geometrische Erklärung:}
+Um geometrisch die Ablenkung zu berechnen muss die Annahme getroffen werden, dass die Ablenkung des Magnetfeldes nur in einem kreisförmigen Ausschnitt wirkt. Die Situation ist wie in der Skizze in der Abbildung \ref{fig:ausBlog}.\footnote{Diese Abbildung wurde übernommen aus \url{https://www.physikerboard.de/ptopic,342494.html#342494}.} Aus der Skizze ergibt sich, dass der Ablenkwinkel, um den der Strahl geknickt wird, gleich ist zu dem Winkel im großen Kreis zwischen den Punkten A (Eintrittspunkt in den kleinen Kreis) und B (Austrittspunkt aus dem kleinen Kreis). Im rechtwinkligen Dreieck aus dem Punkt A und den beiden Mittelpunkten der Kreise, kann man die Definition des Tangens benutzen. Der Winkel ist $\frac{\alpha}{2}$ da die Winkelhalbierende als Verbindungslinie fungiert. Also gilt die Formel \ref{eq:tan}. Um festzustellen in welche Richtung um den Winkel $\alpha$ abgelenkt wird, müssen die Richtungsvektoren des Strahls und des Magnetfeldes betrachtet werden. Die Lorentzkraft wirkt in die Richtung des Kreuzprodukts dieser beiden. Da mit negativen Teilchen gearbeitet wird, muss der Richtungsvektor des Strahls umgedreht werden. Dadurch ergibt sich die Formel \ref{eq:a}. 
+\begin{figure}
+    \centering
+    \includegraphics[width=.75\textwidth]{fig/elektronenstrahl-ablenkung_101.jpg}
+    \caption{Skizze für Winkelberechnung}
+    \label{fig:ausBlog}
+\end{figure}
+
+\subsection{Die geometrische Formel:}
 \begin{equation}
     \label{eq:tan}
-    \tan(\frac{\alpha}{2}) = \frac{d}{2 \cdot r}
+    \tan(\frac{\alpha}{2}) = \frac{d}{2}:r = \frac{d}{2 \cdot r}
 \end{equation}
 
 \begin{equation}
     \label{eq:a}
     \vv{a} = \vv{s} \cdot (-1) \times \vv{b}
 \end{equation}
+
 \begin{equation}
     \label{eq:v}
     \vv{v} = \vv{v} + \vv{a} \cdot l \cdot \tan(\alpha)
