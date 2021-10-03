@@ -136,8 +136,7 @@ Vektor ergebnisvektor = new Vektor(bildschirmabstand,0,0);
     {
         ergebnisvektor 
         = ergebnisvektor.addieren( m.ablenkungsrichtung.
-        multiplizieren(bildschirmabstand).
-        multiplizieren(Math.tan(m.alpha)));
+        multiplizieren(bildschirmabstand*Math.tan(m.alpha)));
     }
 return ergebnisvektor;
 
