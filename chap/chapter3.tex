@@ -72,7 +72,7 @@ teilchengeschwindigkeit
 Das Magnetfeld der Ablenkspulenpaare ist homogen und steht senkrecht zu der Bewegungsrichtung der Elektronen.
 Die Elektronen kommen mit einer gewissen Geschwindigkeit $v$ aus der Elektronenkanone heraus und diese bleibt auch im weiteren Verlauf konstant.
 Dies bedeutet, dass die Lorentzkraft $F_L$ stets senkrecht zur Bewegungsrichtung der Elektronen wirkt und ihr Betrag dadurch konstant bleibt.
-Dies bedeutet, dass Sie deswegen als Zentripetalkraft auf die Elektronen wird und diese dadurch auf eine Kreisbahn zwingt.
+Dies bedeutet, dass Sie deswegen als Zentripetalkraft auf die Elektronen wirkt und diese dadurch auf eine Kreisbahn zwingt.
 Wie bereits beschrieben, wirkt die Lorentzkraft als Zentripetalkraft immer senkrecht auf die Bewegungsrichtung der Elektronen.
 Dies bedeutet, dass die Kraftkomponente in Bewegungsrichtung nicht vorhanden ist und die Geschwindigkeit deswegen konstant bleibt.
 Dadurch leitet sich ab: 
@@ -108,7 +108,7 @@ bahnradius
 \subsection{geometrische Erklärung:}
 
 Um geometrisch die Ablenkung zu berechnen muss die Annahme getroffen werden, dass die Ablenkung des Magnetfeldes nur in einem kreisförmigen Ausschnitt wirkt.
-Die Situation ist wie in der Skizze in der Abbildung \ref{fig:ausBlog}.\footnote{Diese Abbildung wurde übernommen aus \url{https://www.physikerboard.de/ptopic,342494.html#342494}.}
+Die Situation ist wie in der Skizze in der Abbildung \ref{fig:ausBlog} dargestellt.\footnote{Diese Abbildung wurde übernommen aus \url{https://www.physikerboard.de/ptopic,342494.html#342494}.}
 Aus der Skizze ergibt sich, dass der Ablenkwinkel, um den der Strahl geknickt wird, gleich ist zu dem Winkel im großen Kreis zwischen den Punkten A (Eintrittspunkt in den kleinen Kreis) und B (Austrittspunkt aus dem kleinen Kreis).
 Im rechtwinkligen Dreieck aus dem Punkt A und den beiden Mittelpunkten der Kreise, kann man die Definition des Tangens benutzen.
 Der Winkel ist $\frac{\alpha}{2}$ da die Winkelhalbierende als Verbindungslinie fungiert.
@@ -164,8 +164,8 @@ Bei der \lstinline$Ablenkungsrichtung$ wird der Richtungsvektor des Strahl mit $
 Durch den Befehl \lstinline$this.richtungsvektor$ wird auf den Richtungsvektor des jeweiligen Magnetes verwiesen.
 Des Weiteren ist noch hinzuzufügen, dass die Berechnung jedes Ablenkspulenpaar für sich macht uns daher auch eigene Werte für \lstinline$alpha$, den \lstinline$Bahnradius$ und die \lstinline$Ablenkungsrichtung$ hat.
 Der \lstinline$Ergebnisvektor$ ist ein Vektor der gespeichert wird und später dafür verwendet wird, dass der Strahl vom Magneten zu dem Vektor auf dem Bildschirm gezeichnet wird.
-Durch den for Befehl wird bewirkt, dass wie oben bereits genannt die Berechnung des \lstinline$Ergebnisvektors$ für jeden der Magneten gemacht werden muss.
-Dies bedeutet, dass der \lstinline$Ergebnisvektor$, welcher zu Beginn auf\lstinline$bildschirmabstand$ als x- Koordinate, $0$ als y-Koordinate und 0 als z-Koordinate gesetzt ist, erst die Formel \ref{eq:v} benutzt wird und addiert wird.
+Durch den \lstinline$for$ Befehl wird bewirkt, dass wie oben bereits genannt die Berechnung des \lstinline$Ergebnisvektors$ für jeden der Magneten gemacht werden muss.
+Dies bedeutet, dass der \lstinline$Ergebnisvektor$, welcher zu Beginn auf den \lstinline$bildschirmabstand$ als x- Koordinate, $0$ als y-Koordinate und 0 als z-Koordinate gesetzt ist, erst die Formel \ref{eq:v} benutzt wird und addiert wird.
 Danach wird die Formel \ref{eq:v} erneut benutzt und erneut addiert. Dies führt dazu, dass der Punkt auf dem Schirm E nun berechnet ist.
 
 \begin{lstlisting}
