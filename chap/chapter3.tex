@@ -1,9 +1,9 @@
 \section{Animation}
 
-\paragraph{meine Einstellungsparameter:}
+\paragraph{Einstellungsparameter:}
 
 \begin{itemize}
-    \item Beschleunigungsspannung $U_B$ im Bereich von 12 kV bis 16 kV, zugehöriger Richtungsvektor $\vv{s} = \vektor{1}{0}{0}$
+    \item Beschleunigungsspannung $U_B$ im Bereich von 12 kV bis 16 kV und  zugehöriger Richtungsvektor $\vv{s} = \vektor{1}{0}{0}$ der Beschleunigungsstrecke.
     \item Magnetfeldstärke zweier Ablenkspulen:
     
     \begin{itemize}
@@ -39,7 +39,7 @@
 Durch den glühelektrischen Effekt werden Elektronen freigesetzt. 
 Dabei wird ein "Wehnelt-Zylinder" durch eine Heizspannung $U_H$ erhitzt.
 Die nun freien Elektronen werden durch die Kathode (positiver Pol) gebündelt.
-Dies geschieht dadurch das in der Mitte der Platte ein kleines Loch vorhanden ist durch welches der Elektronenstrahl nun fließt. 
+Dies geschieht dadurch das in der Mitte der Platte ein kleines Loch vorhanden ist durch welches der Elektronenstrahl nun hindurch gelangt. 
 Um die Geschwindigkeit zu bestimmen muss der Energieerhaltungssatz betrachtet werden.
 Dabei wird die kinetische Energie und die elektrische Energie gleichgesetzt.
 Um die elektrische Energie benutzen zu können, wird das Ende des "Wehnelt-Zylinder" als Anode aufgefasst( negativer Pol) und dadurch entsteht ein elektrisches Feld in welchem auch die elektrische Energie vorhanden ist. 
@@ -47,14 +47,18 @@ $$ E_{kin} = E_{el}$$
 $$ \frac{1}{2} \cdot m \cdot v^2 = e \cdot U_B$$
 Diese Formel wird  nun nach v umgestellt:
 %\subsection{Die physikalische Formel:} 
-$$ v = \sqrt{\frac{2 \cdot e \cdot U_B}{m}}$$
+\begin{equation}
+\label{eq:v}
+   v = \sqrt{\frac{2 \cdot e \cdot U_B}{m}} 
+\end{equation}
+$$ $$
 
 \subsection{Erklärung/Umsetzung der Physik im Code:}
 
 Im Folgenden ist der Code in der Simulation dargestellt.
 Zu sehen ist, dass die oben genannte Formel benutzt wird und die jeweiligen Attribute aus den zugehörigen Klassen geholt werden.
 Hier muss sich die Spannung $U_B$ aus der Elektronenkanone (\lstinline$quelle$)  geholt werden.
-Des Weiteren wird die Spannung mit 1000 multipliziert, da in der Formel mit V gerechnet wird, während die Spannung der Elektronenkanone in kV angegeben ist. Deswegen muss diese noch umgerechnet werden.
+Des Weiteren wird die Spannung mit 1000 multipliziert, da in der Formel mit Volt gerechnet wird, während die Spannung der Elektronenkanone in Kilovolt angegeben ist. Deswegen muss diese noch umgerechnet werden.
 
 \begin{lstlisting}
 teilchengeschwindigkeit 
@@ -87,23 +91,7 @@ Dies lässt sich nun nach $r$ umstellen und man erhält die Formel \ref{eq:r}.
      r = \frac{m \cdot v}{e \cdot B}
 \end{equation}
 
-
-%\subsection{Erklärung/Umsetzung der Physik im Code:}
-
-Im Folgenden ist der Code in der Simulation dargestellt.
-Hier wird zuerst ebenfalls der \lstinline$Bahnradius$ berechnet, dies geschieht dadurch, dass die Elektronenmasse und die zuvor berechnete Teilchengeschwindigkeit mit aus dem Strahl geholt werden und miteinander multipliziert werden.
-Des Weiteren wird dieses Ergebnis durch die Elektronenladung und der Magnetfeldstärke mal 1000 dividiert. Die Elektronenladung wird sich ein weiteres mal aus der Klasse Strahl geholt, wo sie gespeichert wurde.
-
-\begin{lstlisting}
-bahnradius
-  = strahl.elektronenmasse
-    * strahl.teilchengeschwindigkeit
-    / (strahl.elektronenladung * magnetfeldstaerke/1000)
-    * 1000;
-\end{lstlisting}
-
 \section{Geometrische Bestimmung des Winkels}
-
 
 \subsection{geometrische Erklärung:}
 
