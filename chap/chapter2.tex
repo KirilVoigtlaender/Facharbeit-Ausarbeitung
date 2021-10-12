@@ -14,12 +14,12 @@ Die Herleitung der Coulomb-Kraft sieht wie folgt aus:
 Man nehme sich zwei Punktladungen, welche mit $q_1$ und mit $q_2$ gekennzeichnet werden. 
 Des weiteren ist ein Abstand $r$ vorhanden.
 Es gibt einmal die Kraft von $q_1$ auf $q_2$ ($\vv{F_{12}}$) und einmal die Kraft von $q_2$ auf $q_1$ ($\vv{F_{21}}$).
-Diese beiden Kräfte sind nach Newton gegengesetzt und zudem betragsgleich.
+Diese beiden Kräfte sind nach Newton entgegengesetzt und zudem von Betrag gleich.
 Durch betrachten der Animation\cite{Animation} 
 lässt sich schließen, dass wenn $r$ gleich bleibt, aber die die Ladungen $q_1$ und $q_2$ erhöht werden, die Coulomb-Kraft ebenfalls zunimmt.
 Daraus lässt sich schließen, dass die elektrische Kraft proportional zu den Ladungen $q_1$ und $q_2$ ist. 
 Wenn die Ladungen $q_1$ und $q_2$ gleich bleiben und $r$ erhöht wird, dann verringert sich die elektrische Kraft.
-Daraus lässt sich wiederum schließen, dass die elektrische Kraft antiproportional zum Abstand $r$ ist.
+Daraus lässt sich wiederum schließen, dass die elektrische Kraft anti proportional zum Abstand $r$ ist.
 Daraus ergibt sich die Formel: $F_{el} = \frac{q_1 \cdot q_2}{r^2}$.
 Diese Kraftauswirkung geschieht in einem Feld, welches als elektrisches Feld bekannt ist.
 Die Formel für das E-Feld ist : $E = \frac{F}{q}$.
@@ -27,19 +27,40 @@ Die Definition des E-Feldes lautet: $[E] = \frac{N}{C} = \frac{V}{m}$.
 
 %Beschreibung
 Das elektrische Feld ist eine Eigenschaft des Raums, die Kraftwirkung zwischen zwei Körpern ohne materielle Verbindung beschreibt und durch virtuelle Feldlinien dargestellt werden kann. 
-Die Egenschaften des elektrischen Feldes werden mithilfe von Probeladung und Feldlinien beschrieben.
-Die elektrischen Feldlinien verlaufen stehts von Plus nach Minus, dies ist wie oben bereits genannt wegen der Kraftwirkung auf einen positiven Probekörper.
+Die Eigenschaften des elektrischen Feldes werden mithilfe von Probeladung und Feldlinien beschrieben.
+Die elektrischen Feldlinien verlaufen stets von Plus nach Minus, dies ist wie oben bereits genannt wegen der Kraftwirkung auf einen positiven Probekörper.
 Die Feldlinien kreuzen und berühren sich nicht.
 Wenn die Feldlinien eng beieinander liegen (hohe Dichte), dann ist das dort auch existierende elektrische Feld stark.
 Wenn die Dichte der Feldlinien allerdings niedrig ist, dann ist das elektrische Feld auch schwach.
 Es gibt zwei unterschiedliche Arten von elektrischen Feldern. 
-Es gibt zum einen das homogene elektrische Feld und zum anderne das inhomeogene elektrische Feld.
+Es gibt zum einen das homogene elektrische Feld und zum anderen das inhomogene elektrische Feld.
 Bei dem homogenen elektrischen Feld stehen die Feldlinien parallel zu einander und das elektrische Feld ist an allen Stellen gleich stark.
 Bei dem inhomogenen elektrischen Feld kann diese Annahme nicht getätigt werden.
-
+% hier eventuell noch auf die verschiedene Ladungen eingehen (Punktladung, etc.)
 \subsection{Anwendung}
- 
+Als Anwendungsbeispiel lässt sich der Plattenkondensator nehmen:
+Hier lässt sich die Annahme treffen, dass das elektrische Feld zwischen den Platten homogen ist.
+Des Weiteren ist das elektrische Feld als $E = \frac{U}{d}$ definiert.
+Beim Kondensator kann noch eine weitere Größe eingeführt werden, die Kapazität.
+Damit ist die Menge an Ladung gemeint, welche auf die Platte passt.
+Die Herleitung ist wie folgt:
+$\mbox{Flächenladungsdichte: } \sigma \mbox{:=} \frac{Q}{A}$.
+Dies führt zum elektrischen Feld mit $\sigma = \epsilon_0 \cdot E$ als Feldgleichung.
+Dabei beträgt $\epsilon_0 = 8.854 \cdot 10^{-12} \frac{As}{Vm}$ und ist unter dem Namen "Dielektrizitätskonstante" bekannt.
+Tatsächlich ist die Feldgleichung, allerdings noch Material abhängig, weshalb die richtige Feldgleichung $\sigma = \epsilon_0 \cdot \epsilon_r \cdot E$ ist.
+Dabei ist $\epsilon_r$ die "relative Permittivität" und beschreibt die Material abhängige Konstante, welche bei Luft den Wert $1$ beträgt.
+Daraus folgt, dass $ Q = \epsilon_0 \cdot \epsilon_0 \cdot \frac{A}{d} \cdot U$ ist.
+Die Kapazität ist als $\mbox{C:= } \frac{Q}{U} = \epsilon_0 \cdot \epsilon_r \cdot \frac{A}{d}$ definiert.
+Des Weiteren kann die Energie im Plattenkondensator bestimmt werden.
+Dafür wird angenommen, dass der Kondensator zuerst neutral ist und eine äußere Spannung $U_0$ anliegt.
+Im ersten Schritt fließt eine kleine Portion Ladung $\Delta Q$ mit dem Energieaufwand $\Delta W_1$ auf die andere Platte. Dabei entsteht die Spannung $U_1$ zwischen den Platten $\rightarrow$ $\Delta W_1 = U_1 \cdot \Delta Q$.
+Es wird mehr Energie nötig weitere gleichgroße Ladungen $\Delta Q$ auf die Platte zu bringen $\Delta W_2 = U_2 \cdot \Delta Q$.
+Die letzte Ladung $\Delta Q$ wird mit der Energie $\Delta W_E$ auf die Platte transportiert und dabei liegt zwischen den Platten die Spannung $U_0$. 
+$\Delta W_E = U_0 \cdot \Delta Q$.
+Daraus folgt die Gesamtenergie: W = $\Delta W_1 + \Delta W_2 +...+ \Delta W_E$
+$$\Rightarrow W \mbox{ = } \frac{1}{2}\cdot Q_E \cdot U_o \mbox{ wegen $Q_E = c \cdot U_0$}$$
+$$W= \frac{1}{2} \cdot c \cdot U_o^2$$
 \section{E-Feld:}
 \subsection{Entstehung und Beschreibung}
 \subsection{Anwendung}
-\section{Wechselwirkung der Felder}%Maxwell-Gleichung
+\section{Wechselwirkung der Felder}%Maxwellgleichung
