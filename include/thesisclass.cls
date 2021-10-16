@@ -19,7 +19,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{include/thesisclass}
-\LoadClass[a4paper,11pt,titlepage]{scrbook}
+\LoadClass[a4paper,11pt,titlepage,openany]{scrbook}
 
 
 
