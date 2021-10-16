@@ -134,7 +134,8 @@ Die elektrische Kraft hingegen entsteht, wenn die Geschwindigkeit "`$v$"' gleich
 Den auf bewegte Teilchen wirkt die Lorentzkraft und nicht die elektrische Kraft.
 Es gibt keine Beeinflussung der Felder, wenn sie stationär sind. 
 Die Beeinflussung tritt erst in Kraft bei veränderlichen Feldern.
-Dies lässt sich mit Hilfe der sogenannten "`Maxwell-Gleichung"' betrachten.
+Dies lässt sich mit Hilfe der sogenannten "`Maxwell-Gleichungen"' betrachten.
+Diese wären:
 \begin{equation}
 \label{eq:div E}
     \nabla \cdot E = \frac{1}{\epsilon_o} \cdot \rho
@@ -145,9 +146,21 @@ Dies lässt sich mit Hilfe der sogenannten "`Maxwell-Gleichung"' betrachten.
 \end{equation}
 \begin{equation}
 \label{eq:rot E}
-    \nabla \times E = - \frac{\delta B}{\delta t}
+    \nabla \times E = - \frac{\partial B}{\partial t}
 \end{equation}
 \begin{equation}
 \label{eq:rot B}
-    \nabla \times B = \mu_0 \cdot j + \mu_0 \cdot \epsilon_0 \cdot \frac{\delta E}{\delta t}
+    \nabla \times B = \mu_0 \cdot j + \mu_0 \cdot \epsilon_0 \cdot \frac{\partial E}{\partial t}
 \end{equation}
+Für die Wechselwirkung zwischen elektrischen und magnetischen Feldern ist nur die Gleichungen \ref{eq:rot E} und die Gleichung \ref{eq:rot B} notwendig zu betrachten.
+Die anderen beiden Gleichungen allerdings liefern trotzdem wichtige Informationen und sind die Grundlagen für die Gleichung \ref{eq:rot E} und für \ref{eq:rot B}.
+Die Maxwell-Gleichungen sind wie folgt zu lesen: 
+Das "`$\cdot$"' bedeutet Divergenz und beschreibt die Quelle des Feldes.
+Das "`$\times$"' bedeutet Rotation und beschreibt die Rotation des Feldes.
+Dies bedeutet,dass die Gleichung \ref{eq:div E} zeigt, dass die Quelle für das E-Feld die Ladung ist.
+Dies lässt sich dadurch zeigen, dass sich eine Ladung genommen wird und dort ist zu sehen, dass von ihr aus die Feldlinien ausgehen, welche das elektrische Feld darstellen.
+Die Gleichung \ref{eq: div B} zeigt, dass das B-Feld keine Quelle hat, da es keine Monopole gibt und die Feldlinien stets geschlossen sind und dadurch kein Anfang bestimmt werden kann.
+Dies lässt sich dadurch zeigen, dass sich ein Stabmagnet genommen wird, bei welchem die Magnetfeldlinien "`rein"' und wieder "`raus"' gehen und eine geschlossene Bahn darstellen.
+Deswegen kann kein Anfang erkennt werden und dem zu folge auch keine Quelle.
+Die Gleichung \ref{eq:rot E} bedeutet, dass ein sich rotierendes elektrisches Feld ein entgegengesetztes sich zeitlich änderndes magnetisches Feld erzeugt.
+Die Gleichung \ref{eq:rot B} zeigt, dass ein sich rotierendes magnetisches Feld ein Spannung und ein sich zeitlich änderndes elektrisches Feld erzeugt.
