@@ -124,6 +124,7 @@ Nun lässt sich dieses Ergebnis quadrieren und durch $e$ dividieren: $e \cdot B^
 Als letztes kann die Gleichung noch durch $m$ und durch $B^2$ dividieren und als Ergebnis kommt für die spezifische Ladung "`$\frac{e}{m}$"' raus : $\frac{e}{m} = \frac{2 \cdot U_B}{ r^2 \cdot B^2}$.
 Diese Formel gibt die spezifische Ladung eines Elektrons an, allerdings kann man $e$ auch durch $q$ ersetzten und dadurch die spezifische Ladung eines jeden anderen Ions berechnen.
 \section{Wechselwirkung der Felder}%Maxwellgleichung
+\label{sec:Maxwell}
 Als erstes wird die Wechselwirkung von statischen Feldern betrachtet.
 Da bei sind die elektrischen und magnetischen Felder konstant und überlagern sich ungestört.
 Dabei gilt für die Kraft die Formel:$F_{Ges} = Q (E + v \times B)$.
@@ -134,5 +135,19 @@ Den auf bewegte Teilchen wirkt die Lorentzkraft und nicht die elektrische Kraft.
 Es gibt keine Beeinflussung der Felder, wenn sie stationär sind. 
 Die Beeinflussung tritt erst in Kraft bei veränderlichen Feldern.
 Dies lässt sich mit Hilfe der sogenannten "`Maxwell-Gleichung"' betrachten.
-
-\label{sec:Maxwell}
+\begin{equation}
+\label{eq:div E}
+    \nabla \cdot E = \frac{1}{\epsilon_o} \cdot \rho
+\end{equation}
+\begin{equation}
+\label{eq: div B}
+    \nabla \cdot B = 0
+\end{equation}
+\begin{equation}
+\label{eq:rot E}
+    \nabla \times E = - \frac{\delta B}{\delta t}
+\end{equation}
+\begin{equation}
+\label{eq:rot B}
+    \nabla \times B = \mu_0 \cdot j + \mu_0 \cdot \epsilon_0 \cdot \frac{\delta E}{\delta t}
+\end{equation}
