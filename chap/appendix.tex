@@ -1,7 +1,4 @@
-\section{First Appendix Section}
-Wonderful Appendix!
-
-\section{Konstanten:}
+\section{Konstanten}
 
 \begin{itemize}
     \item Felddurchmesser $d$ = 30 in mm
@@ -10,7 +7,7 @@ Wonderful Appendix!
     \item Bildschirmabstand $l$ = 500 in mm
 \end{itemize}
 
-\section{Zu berechnenden Parameter:}
+\section{Zu berechnende Parameter}
 
 \begin{itemize}
     \item Teilchengeschwindigkeit v in $\frac{km}{s}$
@@ -22,45 +19,39 @@ Wonderful Appendix!
 
 
 \section{\textbf{Graphische Ausarbeitung}}
-Wenn immer man ein Objekt(Fernsehröhre oder jedes andere mögliche Objekt) auf einen Bildschirm abbilden möchte, muss man aus 3D in der "`Realität"' 2D auf dem Bildschirm machen. Dafür muss man eine Koordinatentransformation machen, welche auch als Kameratransformation bekannt ist.
+Wann immer man ein Objekt(Fernseheröhre oder jedes andere mögliche Objekt) auf einen Bildschirm abbilden möchte, muss man aus 3D in der "`Realität"' 2D auf dem Bildschirm machen. Dafür muss man eine Koordinatentransformation machen, welche auch als Kameratransformation bekannt ist.
 
-\underline{Würfel:}
-$$(x -100 \mbox{ bis }  100)$$
-$$(y-100\mbox{ bis }100)$$
-$$(z-100\mbox{ bis }100$$
-
-
-\underline{a = Blickrichtung}
+\underline{$\vv{a}$ = Blickrichtung}
 $$x = \sqrt{\frac{1}{6}}$$
 $$y = \sqrt{\frac{2}{3}}$$
 $$z = -\sqrt{\frac{1}{6}}$$
 $$\vv{a}=\vektor{\sqrt{\frac{1}{6}}}{\sqrt{\frac{2}{3}}}{-\sqrt{\frac{1}{6}}} $$
-x, y sollen positiv sein, z soll negativ sein und der Betrag/Länge soll eins sein. X etwas kleiner als y.
+$x$, $y$ sollen positiv sein, $z$ soll negativ sein und der Betrag/Länge soll 1 sein. $X$ etwas kleiner als $y$.
 $$y= \sqrt{\frac{2}{3}}$$
 $$x= \sqrt{\frac{1}{6}}$$
-\underline{b:}
-z = 0 ; andere Werte so wählen, dass Skalarprodukt 0 ergibt
+\underline{$\vv{b}$:}
+$z$ = 0 ; andere Werte so wählen, dass Skalarprodukt 0 ergibt
 $$x= \sqrt{\frac{2}{3}}$$
 $$y=-\sqrt{\frac{1}{6}}$$
 $$z=0$$
-$$|\vv{b}| = \sqrt{\frac{5}{6}}\neq 1\mbox{ ; also müssen x und y mit dem Kehrwert von $\sqrt{\frac{5}{6}}$ also mit $\sqrt{\frac{6}{5}}$ multipliziert werden.}$$
+$$|\vv{b}| = \sqrt{\frac{5}{6}}\neq 1\mbox{ ; also müssen $x$ und $y$ mit dem Kehrwert von $\sqrt{\frac{5}{6}}$, also mit $\sqrt{\frac{6}{5}}$ multipliziert werden.}$$
 $$x' = \sqrt{\frac{12}{15}} = \sqrt{\frac{4}{5}}$$
 $$y' = - \sqrt{\frac{1}{5}}$$
 $$z' = 0$$
 $$\vv{b}= \vektor{\sqrt{\frac{4}{5}}}{-\sqrt{\frac{1}{5}}}{0}$$
-\underline{c:}
+\underline{$\vv{c}$:}
 $$\vv{c} = \vv{b}\times  \vv{a}$$
 $$= \vektor{\frac{4}{5}}{-\sqrt{\frac{1}{5}}}{0}
       \times \vektor{\sqrt{\frac{1}{6}}}{\sqrt{\frac{2}{3}}}{-\sqrt{\frac{1}{6}}} \mbox{ = } 
      \left(\begin{array}{c} 
      \frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\\2\cdot\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\\2\cdot\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}+\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\end{array}\right)
 $$
-Wir suchen eine Matrix A, sodass
+Wir suchen eine Matrix $A$, sodass
 
      $$A\cdot \vv{a}=\vektor{0}{1}{0}\mbox{ ist ;} $$
      $$A\cdot \vv{b}=\vektor{1}{0}{0}\mbox{ ist ;}$$
      $$A\cdot \vv{c}=\vektor{0}{0}{1}\mbox{ ist ;} $$
      
-$$\mbox{B = }\m{2\cdot\frac{\sqrt{5}}{5}}{\frac{1}{6}\sqrt{6}}{\frac{1}{30}\sqrt{30}}{\frac{-1}{5}\sqrt{5}}{\frac{1}{3}\sqrt{6}}{\frac{1}{15}\sqrt{30}}{0}{\frac{-1}{6}\sqrt{6}}{\frac{1}{6}\sqrt{30}}$$
-Um auf die Matrix A zu kommen muss man nun die Matrix mit Hilfe von GeoGebra invertieren:
-$$\mbox{A = } \m {2\cdot\frac{\sqrt{5}}{5}}{-\frac{\sqrt{5}}{5}}{0}{\frac{\sqrt{6}}{6}}{\frac{\sqrt{6}}{3}}{-\frac{\sqrt{6}}{6}}{\frac{\sqrt{30}}{30}}{\frac{\sqrt{30}}{15}}{\frac{\sqrt{30}}{6}}$$
+$$\mbox{$B$ = }\m{2\cdot\frac{\sqrt{5}}{5}}{\frac{1}{6}\sqrt{6}}{\frac{1}{30}\sqrt{30}}{\frac{-1}{5}\sqrt{5}}{\frac{1}{3}\sqrt{6}}{\frac{1}{15}\sqrt{30}}{0}{\frac{-1}{6}\sqrt{6}}{\frac{1}{6}\sqrt{30}}$$
+Um auf die Matrix $A$ zu kommen, muss man nun die Matrix $B$ mit Hilfe von GeoGebra invertieren:
+$$\mbox{$A$ = } \m {2\cdot\frac{\sqrt{5}}{5}}{-\frac{\sqrt{5}}{5}}{0}{\frac{\sqrt{6}}{6}}{\frac{\sqrt{6}}{3}}{-\frac{\sqrt{6}}{6}}{\frac{\sqrt{30}}{30}}{\frac{\sqrt{30}}{15}}{\frac{\sqrt{30}}{6}}$$
