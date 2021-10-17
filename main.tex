@@ -105,7 +105,7 @@
     \FrontMatter
 
     \input{include/titlepage}
-    \input{include/preamble}
+    
 
     \begingroup \let\clearpage\relax    % in order to avoid listoffigures and
     \tableofcontents                    % listoftables on new pages
@@ -133,9 +133,7 @@
     \input{./chap/4-sim.tex}
 
 
-    \chapter{Polarlichter}
-    \label{chap:polar}
-    \input{./chap/polar.tex}% usage: \emptychapter[page displayed
+   % usage: \emptychapter[page displayed
                                         %        in toc]{name of the chapter}
 
 
@@ -167,4 +165,6 @@
     %\begin{thebibliography}{000}
     %    \bibitem{ident}Entry into Bibliography.
     %\end{thebibliography}
+    
+    \input{include/preamble}
 \end{document}
