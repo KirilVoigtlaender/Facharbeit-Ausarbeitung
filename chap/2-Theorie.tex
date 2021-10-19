@@ -13,7 +13,7 @@ Die Herleitung der Coulomb-Kraft sieht wie folgt aus:
 Man nehme sich zwei Punktladungen, welche mit $q_1$ und mit $q_2$ gekennzeichnet werden. 
 Des Weiteren ist ein Abstand $r$ zwischen den Ladungen vorhanden.
 Es gibt einmal die Kraft von $q_1$ auf $q_2$ ($\vv{F_{12}}$) und einmal die Kraft von $q_2$ auf $q_1$ ($\vv{F_{21}}$).
-Durch Betrachten der Formel $F_{el} = \frac{q_1 \cdot q_2}{r^2}$ 
+Durch Betrachten der Formel $F_{el} = \frac{1}{4 \cdot \pi \cdot \epsilon_r} \cdot \frac{q_1 \cdot q_2}{r^2}$ 
 lässt sich schließen, dass wenn $r$ gleich bleibt, aber die Ladungen $q_1$ und $q_2$ erhöht werden, die Coulomb-Kraft ebenfalls zunimmt.
 Daraus lässt sich schließen, dass die elektrische Kraft proportional zu den Ladungen $q_1$ und $q_2$ ist. 
 Wenn die Ladungen $q_1$ und $q_2$ gleich bleiben und $r$ erhöht wird, dann verringert sich die elektrische Kraft.
@@ -82,17 +82,17 @@ Ein Magnetfeld bewirkt eine Kraft auf ein bewegtes geladenes Teilchen.
 Die wirkende Kraft wird als magnetische Kraft bezeichnet oder als Lorentzkraft, wenn es sich um einen einzelnen Ladungsträger handelt.
 Die Herleitung der Lorentzkraft sieht wie folgt aus:
 Man nehme sich einen Ladungsträger (negativ) und einen langen Leiter.
-Die Formel für die magnetische Kraft lautet: $F_{mag} =  B \cdot I_L \cdot \Delta l$.
+Die Formel für die magnetische Kraft lautet: $F_{mag} = \vv{B} \cdot I_L \cdot \Delta l$.
 Der Strom $I_L$ kann durch $\frac{\Delta Q}{\Delta t}$ ersetzt werden.
-Dadurch kommt die Formel $F_{mag} = B \cdot \frac{\Delta Q}{\Delta t} \cdot l$ raus. 
+Dadurch kommt die Formel $F_{mag} = \vv{B} \cdot \frac{\Delta Q}{\Delta t} \cdot l$ raus. 
 Als nächstes lässt sich $\Delta Q$ durch $N \cdot e$ ersetzen.
-Dies führt zu der Formel $F_{mag} = B \cdot N \cdot e \cdot \frac{\Delta l}{\Delta t}$.
+Dies führt zu der Formel $F_{mag} =\vv{B} \cdot N \cdot e \cdot \frac{\Delta l}{\Delta t}$.
 Dabei lässt sich der Quotient als $v$ vereinfachen, was die Geschwindigkeit der Ladungsträger angibt.
-Dadurch beträgt die Formel für die magnetische Kraft nun: $F_{mag} = B \cdot N \cdot e \cdot v$.
+Dadurch beträgt die Formel für die magnetische Kraft nun: $F_{mag} =\vv{B} \cdot N \cdot e \cdot \vv{v} $.
 Allerdings soll die Lorentzkraft hergeleitet werden, welche die Kraft auf einen einzelnen Ladungsträger darstellt, weshalb die magnetische Kraft mit $N$ dividiert werden muss.
-Dies führt dazu, dass die Formel für die Lorentzkraft $F_L = B \cdot e \cdot v$ ist.
+Dies führt dazu, dass die Formel für die Lorentzkraft $F_L =\vv{B} \cdot e \cdot \vv{v}$ ist.
 Diese Formel lässt sich für jede beliebige Ladung benutzen, weshalb $e$ durch $q$ ersetzt werden kann.
-Daraus ergibt sich die Formel: $F_L = q \cdot B \cdot v$.
+Daraus ergibt sich die Formel: $F_L = q \cdot \vv{B} \cdot \vv{v}$.
 Hier wird angenommen, dass der Geschwindigkeitsvektor senkrecht auf dem Vektor der Flussdichte steht.
 Ist dies nicht der Fall, kann die Formel mit $\sin(\alpha)$ multipliziert werden, wobei alpha den Winkel zwischen den beiden Vektoren darstellt.
 Der Vektor der Lorentzkraft steht senkrecht auf der durch den Geschwindigkeitsvektor und den Vektor der Flussdichte aufgespannten Ebene \cite{Lorentzkraft}.
@@ -103,6 +103,7 @@ Die Visualisierung des Raums, in welchem das Magnetfeld wirkt, nennt man magneti
 Die jeweilige Stärke ergibt sich aus der Größe der Kraft "`$F_L$"', der Länge des Leiters "`$l$"' und der Stärke des elektrischen Stroms "`$I$"'.
 Die Formel für das B-Feld ist: $B = \frac{F_L}{I \cdot l}$.
 Die Dimension des B-Feldes lautet: $[B] = \frac{N}{Am} = \frac{Vs}{m^2} = T$.
+Dabei steht "`$T$"' für Tesla und stellt die Einheit für die Stärke des Magnetfeldes da.
 
 % Beschreibung von B-Feld
 Wenn ein magnetisches Feld vorhanden ist, lässt sich dieses als Eigenschaft des Raums auffassen.
@@ -127,7 +128,7 @@ Dabei zeigt der Daumen die Richtung der Geschwindigkeit der negativen Ladungstr�
 Wenn nun also ein Elektron senkrecht zu den Feldlinien in ein Magnetfeld eintritt, kommt man zu dem Schluss, dass die Elektronen auf einer Kreisbahn abgelenkt werden. 
 Dadurch wirkt die Lorentzkraft als Zentripetalkraft und kann gleichgesetzt werden:
 $$F_L = F_z$$
-$$e \cdot v \cdot B = \frac{m \cdot v^2}{r}$$
+$$e \cdot \vv{v} \cdot \vv{B} = \frac{m \cdot v^2}{r}$$
 Diese Formel lässt sich als erstes durch $v$ dividieren, was zu $e \cdot B = \frac{m \cdot v}{r}$ führt.
 Als nächstes wird $v$ durch den oben genannten Wert %Verweis möglich?
 ersetzt: $e \cdot B = m \cdot \frac{\sqrt{\frac{2 \cdot e \cdot U_B}{m}}}{r}$.
