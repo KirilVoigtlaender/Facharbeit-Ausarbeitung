@@ -64,7 +64,7 @@ $$\vv{c} = \vv{b}\times  \vv{a}$$
 $$= \vektor{\frac{4}{5}}{-\sqrt{\frac{1}{5}}}{0}
       \times \vektor{\sqrt{\frac{1}{6}}}{\sqrt{\frac{2}{3}}}{-\sqrt{\frac{1}{6}}} \mbox{ = } 
      \left(\begin{array}{c} 
-     \frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\\2\cdot\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\\2\cdot\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}+\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\end{array}\right)
+     \frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\\2\cdot\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\\2\cdot\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{3}+\frac{\sqrt{5}}{5}\cdot\frac{\sqrt{6}}{6}\end{array}\right)
 $$
 Wir suchen eine Matrix $A$, sodass
 
@@ -72,7 +72,7 @@ Wir suchen eine Matrix $A$, sodass
      $$A\cdot \vv{b}=\vektor{1}{0}{0}\mbox{ ist ;}$$
      $$A\cdot \vv{c}=\vektor{0}{0}{1}\mbox{ ist ;} $$
      
-$$\mbox{$B$ = } \m{\sqrt{\frac{4}{5}}}{\sqrt{\frac{1}{6}}}{\frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{6}}{-\sqrt{\frac{1}{5}}}{\sqrt{\frac{2}{3}}}{2 \cdot \frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{6}}{0}{-\sqrt{\frac{1}{6}}}{2 \cdot \frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{6} + \frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{6}}$$
+$$\mbox{$B$ = } \m{\sqrt{\frac{4}{5}}}{\sqrt{\frac{1}{6}}}{\frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{6}}{-\sqrt{\frac{1}{5}}}{\sqrt{\frac{2}{3}}}{2 \cdot \frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{6}}{0}{-\sqrt{\frac{1}{6}}}{2 \cdot \frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{3} + \frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{6}}$$
 Um auf die Matrix $A$ zu kommen, muss man nun die Matrix $B$ mit Hilfe von GeoGebra invertieren:
 $$\mbox{$A$ = } \m {2\cdot\frac{\sqrt{5}}{5}}{-\frac{\sqrt{5}}{5}}{0}{\frac{\sqrt{6}}{6}}{\frac{\sqrt{6}}{3}}{-\frac{\sqrt{6}}{6}}{\frac{\sqrt{30}}{30}}{\frac{\sqrt{30}}{15}}{\frac{\sqrt{30}}{6}}$$
 Wir verwenden $A$, um aus einem (x,y,z) Vektor v ein zweidimensionales Koordinatenpaar zu kriegen, indem wir $ A \cdot v = \m {2\cdot\frac{\sqrt{5}}{5}}{-\frac{\sqrt{5}}{5}}{0}{\frac{\sqrt{6}}{6}}{\frac{\sqrt{6}}{3}}{-\frac{\sqrt{6}}{6}}{\frac{\sqrt{30}}{30}}{\frac{\sqrt{30}}{15}}{\frac{\sqrt{30}}{6}} \cdot \vektor{v.x}{v.y}{v.z}$ rechnen um den Vektor $ \vektor{x_1}{-}{y_1}$ rauszubekommen, wobei die y-Koordinate ignorieren.  
