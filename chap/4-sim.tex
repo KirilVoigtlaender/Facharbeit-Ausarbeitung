@@ -4,7 +4,7 @@ Dabei kann die Spannung der Elektronenkanone gesteuert werden und die Magnetfeld
 Dadurch wird die Ablenkung des Strahls, die Geschwindigkeit der Elektronen des Strahls und schlussendlich der Auftreffpunkt berechnet.
 In den Kreisen ist die genaue Ablenkung des Strahls durch die einzelnen Ablenkfelder dargestellt, während in der eigentlichen Simulation nicht aufgelöst werden kann, dass der Strahl im Magnetfeld kreisförmig abgelenkt wird.
 Aufgrund der Größe lässt sich die Kurvenform am Mittelpunkt "`$M$"' nicht visualisieren.
-Deswegen wird dies, wie angemerkt, in den Kreisen oben seperat dargestellt.
+Deswegen wird dies, wie angemerkt, in den Kreisen oben separat dargestellt.
 Die Geschwindigkeit, welche in den Kreisen vorherrscht, entspricht nicht der wirklichen Geschwindigkeit der Elektronen, da diese zu hoch ist und dadurch nicht zu sehen wäre.
 \label{sec:animation}
 
@@ -32,8 +32,8 @@ $$ $$
 %\subsection{Erklärung/Umsetzung der Physik im Code:}
 
 Im Folgenden ist der Code der Simulation dargestellt.
-Zu sehen ist, dass die oben genannte Formel (\ref{eq:v}) benutzt wird und die jeweiligen Attribute () aus den zugehörigen Klassen () geholt werden.
-Hier muss sich die Spannung $U_B$ aus der Elektronenkanone (\lstinline$Quelle$) geholt werden.
+Zu sehen ist, dass die oben genannte Formel (\ref{eq:v}) benutzt wird und die jeweiligen Attribute aus den zugehörigen Klassen geholt werden.
+Dabei wird die Spannung $U_B$ aus der Programmklasse Elektronenkanone (Objekt \lstinline$quelle$) gelesen.
 
 \begin{lstlisting}
 teilchengeschwindigkeit 
