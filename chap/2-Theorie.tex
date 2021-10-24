@@ -16,15 +16,22 @@ Der experimentelle Nachweis der Coulomb-Kraft sieht wie folgt aus:
 Man nehme sich zwei Punktladungen, welche mit $q_1$ und mit $q_2$ gekennzeichnet werden. 
 Des Weiteren ist ein Abstand $r$ zwischen den Ladungen vorhanden.
 Es gibt einmal die Kraft von $q_1$ auf $q_2$ ($\vv{F_{12}}$) und einmal die Kraft von $q_2$ auf $q_1$ ($\vv{F_{21}}$).
-Durch Betrachten der Formel $F_{el} = \frac{1}{4 \cdot \pi \cdot \epsilon_r} \cdot \frac{q_1 \cdot q_2}{r^2}$ 
-lässt sich schließen, dass wenn $r$ gleich bleibt, aber die Ladungen $q_1$ und $q_2$ erhöht werden, die Coulomb-Kraft ebenfalls zunimmt.
+\begin{equation}
+\label{eq:F_el}
+   F_{el} = \frac{1}{4 \cdot \pi \cdot \epsilon_r} \cdot \frac{q_1 \cdot q_2}{r^2}
+\end{equation}
+Durch Betrachten der Formel (\ref{eq:F_el}) lässt sich schließen, dass wenn $r$ gleich bleibt, aber die Ladungen $q_1$ und $q_2$ erhöht werden, die Coulomb-Kraft ebenfalls zunimmt.
 Daraus lässt sich schließen, dass die elektrische Kraft proportional zu den Ladungen $q_1$ und $q_2$ ist. 
 Wenn die Ladungen $q_1$ und $q_2$ gleich bleiben und $r$ erhöht wird, dann verringert sich die elektrische Kraft.
 Daraus lässt sich wiederum schließen, dass die elektrische Kraft quadratisch anti-proportional zum Abstand $r$ ist.
 Diese zuvor beschriebene Kraftwirkung, lässt sich mittels Probeladungen im ganzen Raum um die Ladung messen und als Vektor an jedem Punkt visualisieren.
 Diese Visualisierung des Raumes nennt man elektrisches Feld.
 Die jeweilige Stärke ergibt sich aus der Größe der Probeladung "`$q$"' und der Größe der Kraft "`$F_{el}$"' auf die Ladung.
-Die Formel für das E-Feld ist : $E = \frac{F_{el}}{q}$.
+Die Formel für das E-Feld ist :
+\begin{equation}
+\label{eq:E}
+    E = \frac{F_{el}}{q}
+\end{equation}
 Die Dimension des E-Feldes lautet: $[E] = \frac{N}{C} = \frac{V}{m}$.
 Veranschaulichen lässt sich dies durch die Animation \cite{Animation}.
 
@@ -58,7 +65,12 @@ Im allgemeinen ist das Feld auch noch vom jeweiligen Material abhängig, wodurch
 Diese zusätzliche Konstante berücksichtigt dabei die spezifischen Materialeigenschaften und nennt sich "` relative Permeabilität"'.
 Im Vakuum ist diese jedoch = 1.
 Daraus folgt, dass $ Q = \epsilon_0 \cdot \epsilon_r \cdot \frac{A}{d} \cdot U$ ist.
-Die Kapazität ist als $\mbox{C= } \frac{Q}{U} = \epsilon_0 \cdot \epsilon_r \cdot \frac{A}{d}$ definiert.
+Die Kapazität ist als
+\begin{equation}
+\label{eq:C}
+    C = \frac{Q}{U} = \epsilon_0 \cdot \epsilon_r \cdot \frac{A}{d}
+\end{equation}
+definiert.
 %\section{B-Feld:}
 %\subsection{Entstehung und Beschreibung}
 \section{Entstehung und Beschreibung des B-Feldes}
@@ -89,7 +101,11 @@ Dadurch beträgt die Formel für die magnetische Kraft nun: $F_{mag} = B \cdot N
 Allerdings soll die Lorentzkraft hergeleitet werden, welche die Kraft auf einen einzelnen Ladungsträger darstellt, weshalb die magnetische Kraft mit $N$ dividiert werden muss.
 Dies führt dazu, dass die Formel für die Lorentzkraft $F_L = B \cdot e \cdot v$ ist.
 Diese Formel lässt sich für jede beliebige Ladung benutzen, weshalb $e$ durch $q$ ersetzt werden kann.
-Daraus ergibt sich die Formel: $F_L = q \cdot B \cdot v$.
+Daraus ergibt sich die Formel:
+\begin{equation}
+\label{eq:F_l1}
+    F_L = q \cdot B \cdot v
+\end{equation}
 Hier wird angenommen, dass der Geschwindigkeitsvektor senkrecht auf dem Vektor der Flussdichte steht.
 Ist dies nicht der Fall, kann die Formel mit $\sin(\alpha)$ multipliziert werden, wobei alpha den Winkel zwischen den beiden Vektoren darstellt.
 Der Vektor der Lorentzkraft steht senkrecht auf der durch den Geschwindigkeitsvektor und den Vektor der Flussdichte aufgespannten Ebene \cite{Lorentzkraft}.
@@ -98,7 +114,11 @@ Die Größe der magnetischen Flussdichte "`$B$"' ist den magnetischen Feldlinien
 Sie ist durch die Kraft definiert, welche ein stromdurchflossener Leiter erfährt.
 Die Visualisierung des Raums, in welchem das Magnetfeld wirkt, nennt man magnetisches Feld.
 Die jeweilige Stärke ergibt sich aus der Größe der Kraft "`$F_L$"', der Länge des Leiters "`$l$"' und der Stärke des elektrischen Stroms "`$I$"'.
-Die Formel für das B-Feld ist: $B = \frac{F_L}{I \cdot l}$.
+Die Formel für das B-Feld ist:
+\begin{equation}
+\label{eq:B}
+    B = \frac{F_L}{I \cdot l}
+\end{equation}
 Die Dimension des B-Feldes lautet: $[B] = \frac{N}{Am} = \frac{Vs}{m^2} = T$.
 Dabei steht "`$T$"' für Tesla und stellt die Einheit für die Stärke des Magnetfeldes da.
 
@@ -127,11 +147,11 @@ Wenn nun also ein Elektron senkrecht zu den Feldlinien in ein Magnetfeld eintrit
 Dadurch wirkt die Lorentzkraft als Zentripetalkraft und kann gleichgesetzt werden:
 $$F_L = F_z$$
 $$e \cdot v \cdot B = \frac{m \cdot v^2}{r}$$
-Diese Formel lässt sich als erstes durch $v$ dividieren, was zu $e \cdot B = \frac{m \cdot v}{r}$ führt.
-Als nächstes wird $v$ durch den oben genannten Wert %Verweis möglich?
-ersetzt: $e \cdot B = m \cdot \frac{\sqrt{\frac{2 \cdot e \cdot U_B}{m}}}{r}$.
-Nun lässt sich dieses Ergebnis quadrieren und durch $e$ dividieren: $e \cdot B^2 = m \cdot \frac{2 \cdot U_B}{r^2}$.
-Als letztes kann man die Gleichung noch durch $m$ und durch $B^2$ dividieren und als Ergebnis kommt für die spezifische Ladung "`$\frac{e}{m}$"' raus: $\frac{e}{m} = \frac{2 \cdot U_B}{ r^2 \cdot B^2}$.
+Umformungen nach "`$\frac{e}{m}$"' ergeben die Formel (\ref{eq:e/m}).
+\begin{equation}
+\label{eq:e/m}
+    \frac{e}{m} = \frac{2 \cdot U_B}{ r^2 \cdot B^2}
+\end{equation}
 Diese Formel gibt die spezifische Ladung eines Elektrons an, allerdings kann man $e$ auch durch $q$ ersetzen und dadurch die spezifische Ladung eines jeden anderen Ions berechnen.
 \section{Wechselwirkung der Felder}%Maxwellgleichung
 \label{sec:Maxwell}
