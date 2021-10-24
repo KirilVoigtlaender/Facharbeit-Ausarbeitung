@@ -31,10 +31,9 @@ $$ $$
 
 %\subsection{Erklärung/Umsetzung der Physik im Code:}
 
-Im Folgenden ist der Code in der Simulation dargestellt.
-Zu sehen ist, dass die oben genannte Formel benutzt wird und die jeweiligen Attribute aus den zugehörigen Klassen geholt werden.
-Hier muss sich die Spannung $U_B$ aus der Elektronenkanone (\lstinline$quelle$)  geholt werden.
-Des Weiteren wird die Spannung mit $1000$ multipliziert, da in der Formel mit Volt gerechnet wird, während die Spannung der Elektronenkanone in Kilovolt angegeben ist. Deswegen muss diese noch umgerechnet werden.
+Im Folgenden ist der Code der Simulation dargestellt.
+Zu sehen ist, dass die oben genannte Formel (\ref{eq:v}) benutzt wird und die jeweiligen Attribute () aus den zugehörigen Klassen () geholt werden.
+Hier muss sich die Spannung $U_B$ aus der Elektronenkanone (\lstinline$Quelle$) geholt werden.
 
 \begin{lstlisting}
 teilchengeschwindigkeit 
@@ -47,10 +46,10 @@ teilchengeschwindigkeit
 %\subsection{physikalische Erklärung:}
 
 Das Magnetfeld der Ablenkspulenpaare ist homogen und steht senkrecht zu der Bewegungsrichtung der Elektronen.
-Dies wird durch das Helmholtzspulenpaar realisiert.
+Dies wird durch die Spulenpaare realisiert.
 Die Elektronen kommen mit einer gewissen Geschwindigkeit $v$ aus der Elektronenkanone heraus und diese bleibt auch im weiteren Verlauf konstant.
 Die Lorentzkraft $F_L$ wirkt stets senkrecht zur Bewegungsrichtung der Elektronen und der Betrag der Geschwindigkeit bleibt dadurch konstant.
-Dies bedeutet, dass die Lorentzkraft deswegen als Zentripetalkraft auf die Elektronen wirkt und diese dadurch auf eine Kreisbahn zwingt.
+Hier lässt sich die Lorentzkraft als Zentripetalkraft auffassen, da die Elektronen somit auf einer Kreisbahn abgelenkt werden.
 Wie bereits beschrieben, wirkt die Lorentzkraft als Zentripetalkraft immer senkrecht auf die Bewegungsrichtung der Elektronen.
 Dies bedeutet, dass die Kraftkomponente in Bewegungsrichtung nicht vorhanden ist und die Geschwindigkeit deswegen konstant bleibt.
 Dadurch leitet sich ab: 
@@ -65,14 +64,14 @@ Dies lässt sich nun nach $r$ umstellen und man erhält die Formel (\ref{eq:r}).
      r = \frac{m \cdot v}{e \cdot B}
 \end{equation}
 
-\section{Geometrische Bestimmung des Auftrittspunktes auf den Schirm}
+\section{Geometrische Bestimmung des Auftreffspunktes auf dem Schirm}
 \label{sec:g}
 Die folgenden geometrischen Erklärungen orientieren sich an \cite{Blog} und \cite{Gente1950}.
 %\subsection{geometrische Erklärung:}
 
+Die Situation ist wie in der Abbildung \ref{fig:ausBlog} dargestellt.\footnote{Eine ähnliche Abbildung befindet sich auf Seite 16 von \cite{Gente1950}.}
 Um geometrisch die Ablenkung zu berechnen, muss die Annahme getroffen werden, dass die Ablenkung des Magnetfeldes nur in einem kreisförmigen Ausschnitt wirkt.
-Die Situation ist wie in der Skizze in der Abbildung \ref{fig:ausBlog} dargestellt.\footnote{Eine ähnliche Abbildung befindet sich auf Seite 16 von \cite{Gente1950}.}
-Aus der Skizze ergibt sich, dass der Ablenkwinkel, um den der Strahl geknickt wird, gleich ist zu dem Winkel im großen Kreis zwischen den Punkten A (Eintrittspunkt in den kleinen Kreis) und B (Austrittspunkt aus dem kleinen Kreis).
+Aus der Skizze ergibt sich, dass der Ablenkwinkel, um den der Strahl geknickt wird, gleich ist, zu dem Winkel im großen Kreis zwischen den Punkten A (Eintrittspunkt in den kleinen Kreis) und B (Austrittspunkt aus dem kleinen Kreis).
 Im rechtwinkligen Dreieck aus dem Punkt A und den beiden Mittelpunkten der Kreise kann man die Definition des Tangens benutzen.
 Der Winkel ist $\frac{\alpha}{2}$, da die Winkelhalbierende als Verbindungslinie fungiert.
 Also gilt die Formel:
@@ -86,21 +85,22 @@ Da mit negativen Teilchen gearbeitet wird, muss der Richtungsvektor des Strahls 
     \label{eq:a}
     \vv{a} = - \vv{s}\times \vv{b}
 \end{equation}
-Um den Endpunkt auf dem Schirm zu bestimmen, kann sich die Skizze wie in Abbildung \ref{fig:Schirm} dargestellt zu Hilfe genommen werden.
+Um den Endpunkt auf dem Schirm zu bestimmen, kann sich die Skizze, wie in Abbildung \ref{fig:Schirm} dargestellt, zu Hilfe genommen werden.
 Der Punkt M stellt den Mittelpunkt des kleinen Kreises aus der Abbildung \ref{fig:ausBlog} dar.
 Der Punkt E stellt den Punkt dar, wo der Strahl auf den Schirm trifft.
-Der Punkt U hingegen stellt den Mittelpunkt des Schirm dar.
-Der Winkel $\alpha$ stellt den Winkel dar, welcher mit der Formel (\ref{eq:tan}) dar und $\vv{a}$ stellt die Ablenkrichtung des Strahl dar, welche mit der Formel (\ref{eq:a}) berechnet wurde.
+Der Punkt U hingegen stellt den Mittelpunkt des Schirms dar.
+Der Winkel $\alpha$ stellt den Winkel dar, welcher mit der Formel (\ref{eq:tan}) berechnet wurde und $\vv{a}$ stellt die Ablenkrichtung des Strahl dar, welche mit der Formel (\ref{eq:a}) berechnet wurde.
 Da man ein rechtwinkliges Dreieck hat, kann man die Länge ausrechnen, welche die Seite $\vv{UE}$ hat.
 Dies entspricht $\vv{v_\mathit{diff}}$.
-Man erhält einen Vektor, welchen man zu $U$ addieren kann.
+Man erhält einen Vektor, welchen man zum Ortsvektor von $U$ addieren kann.
 Dadurch erhält man die Formel:
 \begin{equation}
     \label{eq:v_d}
     \vv{v_\mathit{diff}} =  \vv{a} \cdot l \cdot \tan(\alpha)
 \end{equation}
 Da mit zwei Magneten gearbeitet wird, müssen die Formeln (\ref{eq:tan}), (\ref{eq:a}) und (\ref{eq:v_d}) jeweils zweimal wiederholt werden.
-Nun ist der Vektor $\vv{v_\mathit{diff}}$ zweimal vorhanden, einmal für das senkrechte und einmal für das waagerechte Magnetfeld, diese beiden Vektoren werden nun auf den Punkt $U$ (Ortsvektor) draufaddiert, sodass der Punkt $E$ erhalten wird.
+Nun ist der Vektor $\vv{v_\mathit{diff}}$ zweimal vorhanden, einmal für das senkrechte und einmal für das waagerechte Magnetfeld.
+Diese beiden Vektoren werden nun, auf den Punkt $U$ (Ortsvektor) hinzuaddiert, sodass sich der Punkt $E$ ergibt.
 \begin{figure}
     \centering
     \includegraphics[width=.75\textwidth]{fig/elektronenstrahl-ablenkung_101.jpg}
