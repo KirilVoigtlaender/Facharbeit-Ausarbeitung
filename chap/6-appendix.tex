@@ -1,23 +1,36 @@
-\section{Konstanten}
-
+\section{Im Programm verwendete und berechnete Werte}
+Neben den Naturkonstanten
 \begin{itemize}
-    \item Felddurchmesser $d$ = 30 in mm
     \item Masse des Elektrons $m$ =  $9,109 \cdot 10^{-31}$ in kg
     \item Ladung des Elektrons $e$ = $1,602 \cdot 10^{-19}$ in As
+\end{itemize} 
+benutzt das Programm verschiedene weitere Konstanten und Einstellungsparameter. 
+Diese wurden zum Teil aus \cite{Gente1950} übernommen und zum Teil durch ausprobieren mit dem Programm ermittelt, sodass die Darstellung sinnvoll wird (zum Beispiel der Strahl nicht außerhalb der Röhre landet).
+Im Einzelnen sind dies:
+%\section{Konstanten}
+\begin{itemize}
+    \item Felddurchmesser $d$ = 30 in mm
     \item Bildschirmabstand $l$ = 500 in mm
+    \item Beschleunigungsspannung $U_B$ im Bereich von $12 kV$ bis $16 kV$ und  zugehöriger Richtungsvektor $\vv{s} = \vektor{1}{0}{0}$ der Beschleunigungsstrecke.
+    \item Magnetfeldstärke zweier Ablenkspulen:
+    \begin{itemize}
+        \item $B_1$ im Bereich $-5 mT$ bis $5 mT$, zugehöriger Richtungsvektor $\vv{b_1} = \vektor{0}{0}{1}$ % senkrechte Spule
+        \item $B_2$ im Bereich $-5 mT$ bis $5 mT$, zugehöriger Richtungsvektor $\vv{b_2} = \vektor{0}{-1}{0}$ % waagerechte Spule
+    \end{itemize}
 \end{itemize}
 
-\section{Zu berechnende Parameter}
-
+In Abbildung \ref{fig:meineSimulation} ist zu sehen, wie die Einstellungsparameter geändert werden können. 
+Des Weiteren werden die Werte für die zu berechnenden Werte ausgegeben:
+%\section{Zu berechnende Parameter}
 \begin{itemize}
     \item Teilchengeschwindigkeit v in $\frac{km}{s}$
-    \item Ergebnisvektor $\vv{v}$
-    \item Bahnradius r in mm 
-    \item alpha $\alpha$
-    \item Ablenkungsrichtung $\vv{a}$
+    %\item Ergebnisvektor $\vv{v}$
+    \item Bahnradien $r_1$ und $r_2$ in mm 
+    \item Ablenkwinkel $\alpha_1$ und $\alpha_2$ in Grad
+    %\item Ablenkungsrichtung $\vv{a}$
 \end{itemize}
-
-\section{Programm und dessen steuerung}
+Der am Ende von Abschnitt \ref{sec:g} berechnete Punkt $E$ ist im Bild als Endpunkt des blauen Strahls zu erkennen.
+%\section{Programm und dessen steuerung}
 
 \begin{figure}[h]
     \centering
@@ -25,21 +38,11 @@
     \caption{Darstellung der Simulation}
     \label{fig:meineSimulation}
 \end{figure}
-\paragraph{Einstellungsparameter:}
+%\paragraph{Einstellungsparameter:}
 
-\begin{itemize}
-    \item Beschleunigungsspannung $U_B$ im Bereich von $12 kV$ bis $16 kV$ und  zugehöriger Richtungsvektor $\vv{s} = \vektor{1}{0}{0}$ der Beschleunigungsstrecke.
-    \item Magnetfeldstärke zweier Ablenkspulen:
-    
-    \begin{itemize}
-        \item $B_1$ im Bereich $-5 mT$ bis $5 mT$, zugehöriger Richtungsvektor $\vv{b_1} = \vektor{0}{0}{1}$ % senkrechte Spule
-        \item $B_2$ im Bereich $-5 mT$ bis $5 mT$, zugehöriger Richtungsvektor $\vv{b_2} = \vektor{0}{-1}{0}$ % waagerechte Spule
-    \end{itemize}
-
-\end{itemize}
-
+\pagebreak
 \section{\textbf{Graphische Ausarbeitung}}
-Wann immer man ein Objekt (Fernseheröhre oder jedes andere mögliche Objekt) auf einen Bildschirm abbilden möchte, muss man aus 3D in der "`Realität"' 2D auf dem Bildschirm machen. Dafür muss man eine Koordinatentransformation machen, welche auch als Kameratransformation bekannt ist.
+Wann immer man ein Objekt (Fernseheröhre oder jedes andere mögliche Objekt) auf einen Bildschirm abbilden möchte, muss man aus 3D in der "`Realität"' 2D auf dem Bildschirm machen. Dafür muss man eine Koordinatentransformation machen, welche auch als Kameratransformation bekannt ist \cite{Kameratransformation}.
 
 \underline{$\vv{a}$ = Blickrichtung}
 $$x = \sqrt{\frac{1}{6}}$$
@@ -79,6 +82,14 @@ Wir verwenden $A$, um aus einem $(x,y,z)$ Vektor $\vv{v}$ ein zweidimensionales 
 %\section{Simulation}
 %\subsection{a}
 %\subsection{b}
+\section{zusätzliche Abbildungen}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.75\textwidth]{fig/feldlinien-stabmagnet (1).png}
+    \caption{Feldlinien des Stabmagneten (übernommen von \cite{Stabmagnet})}
+    \label{fig:stabm}
+\end{figure}
 
 \begin{figure}[h]
     \centering
