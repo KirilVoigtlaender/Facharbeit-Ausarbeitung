@@ -12,7 +12,7 @@ Die Geschwindigkeit, welche in den Kreisen vorherrscht, entspricht nicht der wir
 
 \section{Berechnungen zur Elektronenkanone}
 
-\subsection{physikalische Erklärung:}
+%\subsection{physikalische Erklärung:}
 \label{sec:tolle-section}
  
 Ein Netzgerät liefert die Heizspannung, die Spannung für die Bündelung des Elektronenstrahls sowie die Anodenspannung für die Beschleunigung der Elektronen.
@@ -31,7 +31,7 @@ Diese Formel wird  nun nach $v$ umgestellt:
 \end{equation}
 $$ $$
 
-\subsection{Erklärung/Umsetzung der Physik im Code:}
+%\subsection{Erklärung/Umsetzung der Physik im Code:}
 
 Im Folgenden ist der Code in der Simulation dargestellt.
 Zu sehen ist, dass die oben genannte Formel benutzt wird und die jeweiligen Attribute aus den zugehörigen Klassen geholt werden.
@@ -46,7 +46,7 @@ teilchengeschwindigkeit
 
 \section{Lorentzkraft und Ablenkung}
 \label{sec:a}
-\subsection{physikalische Erklärung:}
+%\subsection{physikalische Erklärung:}
 
 Das Magnetfeld der Ablenkspulenpaare ist homogen und steht senkrecht zu der Bewegungsrichtung der Elektronen.
 Dies wird durch das Helmholtzspulenpaar realisiert.
@@ -67,9 +67,9 @@ Dies lässt sich nun nach $r$ umstellen und man erhält die Formel (\ref{eq:r}).
      r = \frac{m \cdot v}{e \cdot B}
 \end{equation}
 
-\section{Geometrische Bestimmung des Winkels}
+\section{Geometrische Bestimmung des Auftrittspunktes auf den Schirm}
 
-\subsection{geometrische Erklärung:}
+%\subsection{geometrische Erklärung:}
 
 Um geometrisch die Ablenkung zu berechnen, muss die Annahme getroffen werden, dass die Ablenkung des Magnetfeldes nur in einem kreisförmigen Ausschnitt wirkt.
 Die Situation ist wie in der Skizze in der Abbildung \ref{fig:ausBlog} dargestellt \cite{Blog}.
@@ -80,13 +80,13 @@ Also gilt die Formel:
 \begin{equation}
     \label{eq:tan}
     \tan(\frac{\alpha}{2}) = \frac{d}{2}:r = \frac{d}{2 \cdot r}
-\end{equation}.
+\end{equation}
 Um festzustellen, in welche Richtung um den Winkel $\alpha$ abgelenkt wird, müssen die Richtungsvektoren des Strahls und des Magnetfeldes betrachtet werden.
 Die Lorentzkraft wirkt in die Richtung des Kreuzprodukts dieser beiden.
 Da mit negativen Teilchen gearbeitet wird, muss der Richtungsvektor des Strahls umgedreht werden. Dadurch ergibt sich die Formel: \begin{equation}
     \label{eq:a}
     \vv{a} = - \vv{s}\times \vv{b}
-\end{equation}).
+\end{equation}
 Um den Endpunkt auf dem Schirm zu bestimmen, kann sich die Skizze wie in Abbildung \ref{fig:Schirm} dargestellt zu Hilfe genommen werden.
 Der Punkt M stellt den Mittelpunkt des kleinen Kreises aus der Abbildung \ref{fig:ausBlog} dar.
 Der Punkt E stellt den Punkt dar, wo der Strahl auf den Schirm trifft.
@@ -99,7 +99,7 @@ Dadurch erhält man die Formel:
 \begin{equation}
     \label{eq:v}
     \vv{v_\mathit{diff}} =  \vv{a} \cdot l \cdot \tan(\alpha)
-\end{equation}.
+\end{equation}
 Da mit zwei Magneten gearbeitet wird, müssen die Formeln (\ref{eq:tan}), (\ref{eq:a}) und (\ref{eq:v}) jeweils zweimal wiederholt werden.
 Nun ist der Vektor $\vv{v_\mathit{diff}}$ zweimal vorhanden, einmal für das senkrechte und einmal für das waagerechte Magnetfeld, diese beiden Vektoren werden nun auf den Punkt $U$ (Ortsvektor) draufaddiert, sodass der Punkt $E$ erhalten wird.
 \begin{figure}
@@ -122,8 +122,9 @@ Nun ist der Vektor $\vv{v_\mathit{diff}}$ zweimal vorhanden, einmal für das sen
 
 
 
-\subsection{Erklärung/Umsetzung der Physik im Code:}
+%\subsection{Erklärung/Umsetzung der Physik im Code:}
 
+Für die Umsetzung der obigen Formeln im Code wird wie folgt vorgegangen. 
 Bei der Berechnung des Winkels $\alpha$ wird der arctans der oben bereits genannten Formel (\ref{eq:tan}) genommen und mit zwei multipliziert, da auf der Ausgabe der tatsächliche Winkel $\alpha$ zu sehen sein soll.
 Der Winkel $\alpha$ wird im Bogenmaß berechnet.
 Bei der \lstinline$Ablenkungsrichtung$ wird der Richtungsvektor des Strahl mit $-1$ multipliziert und danach das Kreuzprodukt mit dem Richtungsvektor des Ablenkspulenpaars gebildet, wie bereits in Formel (\ref{eq:a}) genannt.
