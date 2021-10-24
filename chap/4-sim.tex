@@ -19,7 +19,11 @@ Im homogenen elektrischen Feld zwischen Kathode (negativ) und Anode (positiv) we
 Dadurch fliegen die Elektronen mit zunehmender Geschwindigkeit auf die Anode zu.
 Dahin werden die Elektronen durch einen Wehnelt-Zylinder auf der Mittelachse konzentriert.
 Wegen dieser Richtungsfokussierung sowie ihrer erreichten Geschwindigkeit "`fliegen"' die Elektronen durch die Annodenbohrung hindurch und kommen als gebündelter und sich gradlinig bewegender Elektronenstrahl aus der Elektronenkanone hinaus.
-$$ E_{kin} = E_{el}$$
+Da die elektrische Energie in kinetische Energie umgewandelt wird, gilt laut dem Energieerhaltungssatz:
+\begin{equation}
+\label{eq:Energie}
+   E_{kin} = E_{el}  
+\end{equation}
 $$ \frac{1}{2} \cdot m \cdot v^2 = e \cdot U_B$$
 Diese Formel wird  nun nach $v$ umgestellt:
 %\subsection{Die physikalische Formel:} 
@@ -27,7 +31,7 @@ Diese Formel wird  nun nach $v$ umgestellt:
 \label{eq:v}
    v = \sqrt{\frac{2 \cdot e \cdot U_B}{m}} 
 \end{equation}
-$$ $$
+
 
 %\subsection{Erklärung/Umsetzung der Physik im Code:}
 
@@ -53,7 +57,10 @@ Hier lässt sich die Lorentzkraft als Zentripetalkraft auffassen, da die Elektro
 Wie bereits beschrieben, wirkt die Lorentzkraft als Zentripetalkraft immer senkrecht auf die Bewegungsrichtung der Elektronen.
 Dies bedeutet, dass die Kraftkomponente in Bewegungsrichtung nicht vorhanden ist und die Geschwindigkeit deswegen konstant bleibt.
 Dadurch leitet sich ab: 
-$$ F_L=F_z$$
+\begin{equation}
+\label{eq:Kraft}
+   F_L=F_z 
+\end{equation}
 $$ e \cdot v \cdot B = \frac{m \cdot v^2}{r}$$
 Dies lässt sich nun nach $r$ umstellen und man erhält die Formel (\ref{eq:r}).   
 
