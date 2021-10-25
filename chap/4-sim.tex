@@ -132,21 +132,21 @@ Dies bedeutet, dass auf den \lstinline$Ergebnisvektor$, welcher zu Beginn auf de
 Danach wird die Formel (\ref{eq:v_d}) erneut benutzt und erneut addiert. Dies führt dazu, dass der Punkt $E$ auf dem Schirm nun berechnet ist.
 
 \begin{lstlisting}
-alpha = 2 * Math.atan(felddurchmesser/ (2 *bahnradius ));
+alpha = 2 * Math.atan(felddurchmesser / (2 *bahnradius));
+
 ablenkungsrichtung
   = strahl.quelle.richtungsvektor.
     multiplizieren(-1).
     kreuzprodukt(this.richtungsvektor);
 
 Vektor ergebnisvektor = new Vektor(bildschirmabstand,0,0);
-    for(Ablenkspulenpaar m : getWorld().getObjects(Ablenkspulenpaar.class) )
-    {
-        ergebnisvektor 
-        = ergebnisvektor.addieren( m.ablenkungsrichtung.
-        multiplizieren(bildschirmabstand*Math.tan(m.alpha)));
-    }
+for(Ablenkspulenpaar m : getWorld().getObjects(Ablenkspulenpaar.class))
+{
+    ergebnisvektor
+        = ergebnisvektor.addieren(m.ablenkungsrichtung.
+          multiplizieren(bildschirmabstand * Math.tan(m.alpha)));
+}
 return ergebnisvektor;
-
 \end{lstlisting}
 
 %\begin{tabular}{c|c|c}
