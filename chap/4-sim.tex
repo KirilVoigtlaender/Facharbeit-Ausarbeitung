@@ -3,7 +3,7 @@ Wie in der Abbildung \ref{fig:meineSimulation} im Anhang zu sehen ist, werden in
 Dabei kann die Spannung der Elektronenkanone gesteuert werden und die Magnetfeldstärke ebenfalls angepasst werden.
 Dadurch wird die Geschwindigkeit der Elektronen des Strahls, die Ablenkung des Strahls und schlussendlich der Auftreffpunkt jeweils dynamisch neu berechnet.
 In den groß dargestellten Kreisen ist die genaue Ablenkung des Strahls durch die einzelnen Ablenkfelder dargestellt, während aufgrund der Bildauflösung am Schnittpunkt $M$ der Magnetfelder diese kreisförmige Ablenkung nicht visualisiert werden kann.   
-Deswegen wird dies, wie angemerkt, in den Kreisen oben separat dargestellt.
+Deswegen wird dies, wie angemerkt, in den Kreisen oben separat dargestellt.\footnote{Diese Kreise entsprechen dem grauen Kreis in Abbildung \ref{fig:ausBlog}.}
 Die Geschwindigkeit, welche in den Kreisen erscheint, entspricht nicht der wirklichen Geschwindigkeit der Elektronen, da diese zu hoch ist und dadurch nicht zu sehen wäre.
 Die Umsetzung des Programms erfolgt in Java mit der Greenfoot-Umgebung.
 \label{sec:animation}
@@ -42,7 +42,7 @@ teilchengeschwindigkeit
   = Math.sqrt(2 * elektronenladung * quelle.spannung * 1000 
               / elektronenmasse);
 \end{lstlisting}
-
+Die Multiplikation mit 1000 findet statt, da im Programm in Kilovolt gespeichert wird (siehe Anhang \ref{sec:Appendix}).
 \section{Lorentzkraft und Ablenkung}
 \label{sec:a}
 %\subsection{physikalische Erklärung:}
@@ -80,7 +80,7 @@ Der Winkel ist $\frac{\alpha}{2}$, da die Winkelhalbierende als Verbindungslinie
 Also gilt die Formel:
 \begin{equation}
     \label{eq:tan}
-    \tan(\frac{\alpha}{2}) = \frac{d}{2}:r = \frac{d}{2 \cdot r}
+    \tan \left(\frac{\alpha}{2}\right) = \frac{d}{2}:r = \frac{d}{2 \cdot r}
 \end{equation}
 Um festzustellen, in welche Richtung um den Winkel $\alpha$ abgelenkt wird, müssen die Richtungsvektoren des Strahls und des Magnetfeldes betrachtet werden.
 Die Lorentzkraft wirkt in die Richtung des Kreuzprodukts dieser beiden.
@@ -94,8 +94,7 @@ Der Punkt $E$ stellt den Punkt dar, wo der Strahl auf den Schirm trifft.
 Der Punkt $U$ hingegen stellt den Mittelpunkt des Schirms dar.
 Der Winkel $\alpha$ stellt den Winkel dar, welcher sich aus der Formel (\ref{eq:tan}) ergibt und $\vv{a}$ stellt die Ablenkrichtung des Strahl dar, welche mit der Formel (\ref{eq:a}) berechnet wurde.
 Da man ein rechtwinkliges Dreieck hat, kann man die Länge ausrechnen, welche die Seite $\vv{UE}$ hat.
-Dies entspricht einem Vektor $\vv{v_\mathit{diff}}$.
-Man erhält einen Vektor, welchen man zum Ortsvektor von $U$ addieren kann.
+Dies entspricht einem Vektor $\vv{v_\mathit{diff}}$, welchen man zum Ortsvektor von $U$ addieren kann.
 Die Formel ist:
 \begin{equation}
     \label{eq:v_d}
