@@ -5,7 +5,7 @@ Dadurch wird die Geschwindigkeit der Elektronen des Strahls, die Ablenkung des S
 In den groß dargestellten Kreisen ist die genaue Ablenkung des Strahls durch die einzelnen Ablenkfelder dargestellt, während aufgrund der Bildauflösung am Schnittpunkt $M$ der Magnetfelder diese kreisförmige Ablenkung nicht visualisiert werden kann.   
 Deswegen wird dies, wie angemerkt, in den Kreisen oben separat dargestellt.\footnote{Diese Kreise entsprechen dem grauen Kreis in Abbildung \ref{fig:ausBlog}.}
 Die Geschwindigkeit, welche in den Kreisen erscheint, entspricht nicht der wirklichen Geschwindigkeit der Elektronen, da diese zu hoch ist und dadurch nicht zu sehen wäre.
-Die Umsetzung des Programms erfolgt in Java mit der Greenfoot-Umgebung.
+Die Umsetzung des Programms erfolgte in Java mit der Greenfoot-Umgebung.
 \label{sec:animation}
 
 \section{Berechnungen zur Elektronenkanone}
@@ -18,7 +18,7 @@ Die Elektronen haben zu Beginn eine Geschwindigkeit von etwa $0 \frac{m}{s}$.
 Im homogenen elektrischen Feld zwischen Kathode (negativ) und Anode (positiv) werden die Elektronen beschleunigt.
 Dadurch fliegen die Elektronen mit zunehmender Geschwindigkeit auf die Anode zu.
 Dahin werden die Elektronen durch einen Wehnelt-Zylinder auf der Mittelachse konzentriert.
-Wegen dieser Richtungsfokussierung sowie ihrer erreichten Geschwindigkeit "`fliegen"' die Elektronen durch die Annodenbohrung hindurch und kommen als gebündelter und sich geradlinig bewegender Elektronenstrahl aus der Elektronenkanone hinaus.
+Wegen dieser Richtungsfokussierung sowie ihrer erreichten Geschwindigkeit "`fliegen"' die Elektronen durch die Annodenbohrung hindurch und kommen als gebündelter und sich geradlinig bewegender Elektronenstrahl aus der Elektronenkanone heraus.
 Da die elektrische Energie in kinetische Energie umgewandelt wird, gilt laut dem Energieerhaltungssatz:
 \begin{equation}
 \label{eq:Energie}
@@ -42,7 +42,7 @@ teilchengeschwindigkeit
   = Math.sqrt(2 * elektronenladung * quelle.spannung * 1000 
               / elektronenmasse);
 \end{lstlisting}
-Die Multiplikation mit 1000 findet statt, da im Programm in Kilovolt gespeichert wird (siehe Anhang \ref{sec:Appendix}).
+Die Multiplikation mit 1000 findet statt, da die Spannung im Programm in Kilovolt gespeichert wird (siehe Anhang \ref{sec:Appendix}).
 \section{Lorentzkraft und Ablenkung}
 \label{sec:a}
 %\subsection{physikalische Erklärung:}
@@ -88,11 +88,11 @@ Da mit negativen Teilchen gearbeitet wird, muss der Richtungsvektor des Strahls 
     \label{eq:a}
     \vv{a} = - \vv{s}\times \vv{b}
 \end{equation}
-Um den Endpunkt auf dem Schirm zu bestimmen, kann die Skizze, aus Abbildung \ref{fig:Schirm}, zu Hilfe genommen werden.
+Um den Endpunkt auf dem Schirm zu bestimmen, kann die Skizze aus Abbildung \ref{fig:Schirm} zu Hilfe genommen werden.
 Der Punkt $M$ stellt den Mittelpunkt des kleinen Kreises aus der Abbildung \ref{fig:ausBlog} dar.
 Der Punkt $E$ stellt den Punkt dar, wo der Strahl auf den Schirm trifft.
 Der Punkt $U$ hingegen stellt den Mittelpunkt des Schirms dar.
-Der Winkel $\alpha$ stellt den Winkel dar, welcher sich aus der Formel (\ref{eq:tan}) ergibt und $\vv{a}$ stellt die Ablenkrichtung des Strahl dar, welche mit der Formel (\ref{eq:a}) berechnet wurde.
+Der Winkel $\alpha$ stellt den Winkel dar, welcher sich aus der Formel (\ref{eq:tan}) ergibt und $\vv{a}$ stellt die Ablenkrichtung des Strahls dar, welche mit der Formel (\ref{eq:a}) berechnet wurde.
 Da man ein rechtwinkliges Dreieck hat, kann man die Länge ausrechnen, welche die Seite $\vv{UE}$ hat.
 Dies entspricht einem Vektor $\vv{v_\mathit{diff}}$, welchen man zum Ortsvektor von $U$ addieren kann.
 Die Formel ist:
@@ -128,11 +128,11 @@ Bei der \lstinline$Ablenkungsrichtung$ wird der Richtungsvektor des Strahl mit $
 Durch den Ausdruck \lstinline$this.richtungsvektor$ wird auf den Richtungsvektor des jeweiligen Magnetfeldes verwiesen.
 Des Weiteren ist noch hinzuzufügen, dass die Berechnung jedes Ablenkspulenpaar für sich macht und daher auch eigene Werte für \lstinline$alpha$, den \lstinline$Bahnradius$ und die \lstinline$Ablenkungsrichtung$ hat.
 Durch die Schleife wird bewirkt, dass wie oben bereits genannt die Berechnung des \lstinline$Ergebnisvektors$ für jedes der Spulenpaare gemacht wird.
-Dies bedeutet, dass auf den \lstinline$Ergebnisvektor$, welcher zu Beginn auf den \lstinline$Bildschirmabstand$ als $x$- Koordinate, $0$ als $y$-Koordinate und 0 als $z$-Koordinate gesetzt ist, erst die Formel (\ref{eq:v_d}) benutzt wird und addiert wird.
+Dies bedeutet, dass auf den \lstinline$Ergebnisvektor$, welcher zu Beginn auf den \lstinline$Bildschirmabstand$ als $x$-Koordinate, $0$ als $y$-Koordinate und 0 als $z$-Koordinate gesetzt ist, erst die Formel (\ref{eq:v_d}) benutzt wird und addiert wird.
 Danach wird die Formel (\ref{eq:v_d}) erneut benutzt und erneut addiert. Dies führt dazu, dass der Punkt $E$ auf dem Schirm nun berechnet ist.
 
 \begin{lstlisting}
-alpha = 2 * Math.atan(felddurchmesser / (2 *bahnradius));
+alpha = 2 * Math.atan(felddurchmesser / (2 * bahnradius));
 
 ablenkungsrichtung
   = strahl.quelle.richtungsvektor.
@@ -140,7 +140,7 @@ ablenkungsrichtung
     kreuzprodukt(this.richtungsvektor);
 
 Vektor ergebnisvektor = new Vektor(bildschirmabstand,0,0);
-for(Ablenkspulenpaar m : getWorld().getObjects(Ablenkspulenpaar.class))
+for (Ablenkspulenpaar m : getWorld().getObjects(Ablenkspulenpaar.class))
 {
     ergebnisvektor
         = ergebnisvektor.addieren(m.ablenkungsrichtung.
