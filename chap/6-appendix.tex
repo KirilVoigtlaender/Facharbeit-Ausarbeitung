@@ -28,7 +28,7 @@ Des Weiteren werden die Werte für die zu berechnenden Werte ausgegeben:
     \item Teilchengeschwindigkeit $v$ in $\frac{km}{s}$
     \item die Kräfte $F_1$ und $F_2$ aus dem Ansatz (\ref{eq:Kraft}) für senkrechtes und waagerechtes Spulenpaar
     %\item Ergebnisvektor $\vv{v}$
-    \item Bahnradien $r_1$ und $r_2$ in mm 
+    \item Bahnradien $r_1$ und $r_2$ in $mm$ 
     \item Ablenkwinkel $\alpha_1$ und $\alpha_2$ in Grad (die Winkel werden auch in den Kreisen sichtbar)
     %\item Ablenkungsrichtung $\vv{a}$
 \end{itemize}
@@ -45,7 +45,8 @@ Der am Ende von Abschnitt \ref{sec:g} berechnete Punkt $E$ ist im Bild als Endpu
 
 \pagebreak
 \section{Lineare Algebra}
-Wann immer man ein Objekt (Fernseheröhre oder jedes andere mögliche Objekt) auf einen Bildschirm abbilden möchte, muss man aus 3D in der "`Realität"' 2D auf dem Bildschirm machen. Dafür muss man eine Koordinatentransformation machen, welche auch als Kameratransformation bekannt ist \cite{Kameratransformation}.
+\label{sec:lin}
+Wann immer man ein Objekt (Fernsehröhre oder jedes andere mögliche Objekt) auf einen Bildschirm abbilden möchte, muss man aus 3D in der "`Realität"' 2D auf dem Bildschirm machen. Dafür muss man eine Koordinatentransformation machen, welche auch als Kameratransformation bekannt ist \cite{Kameratransformation}.
 Unten ist kurz die im Programm verwendete Perspektive hergeleitet.
 
 \underline{$\vv{a}$ = Blickrichtung}
@@ -82,10 +83,11 @@ Stellt man $\vv{b}$, $\vv{a}$, $\vv{c}$ nebeneinander, erhält man folgende Matr
 $$\mbox{$B$ = } \m{\sqrt{\frac{4}{5}}}{\sqrt{\frac{1}{6}}}{\frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{6}}{-\sqrt{\frac{1}{5}}}{\sqrt{\frac{2}{3}}}{2 \cdot \frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{6}}{0}{-\sqrt{\frac{1}{6}}}{2 \cdot \frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{3} + \frac{\sqrt{5}}{5} \cdot \frac{\sqrt{6}}{6}}$$
 Um auf die Matrix $A$ zu kommen, muss man nun die Matrix $B$ mit Hilfe von GeoGebra invertieren:
 $$\mbox{$A$ = } \m {2\cdot\frac{\sqrt{5}}{5}}{-\frac{\sqrt{5}}{5}}{0}{\frac{\sqrt{6}}{6}}{\frac{\sqrt{6}}{3}}{-\frac{\sqrt{6}}{6}}{\frac{\sqrt{30}}{30}}{\frac{\sqrt{30}}{15}}{\frac{\sqrt{30}}{6}}$$
-Wir verwenden $A$, um aus einem $(x,y,z)$ Vektor $\vv{v}$ ein zweidimensionales Koordinatenpaar zu kriegen, indem wir $ A \cdot \vv{v} = \m {2\cdot\frac{\sqrt{5}}{5}}{-\frac{\sqrt{5}}{5}}{0}{\frac{\sqrt{6}}{6}}{\frac{\sqrt{6}}{3}}{-\frac{\sqrt{6}}{6}}{\frac{\sqrt{30}}{30}}{\frac{\sqrt{30}}{15}}{\frac{\sqrt{30}}{6}} \cdot \vektor{v.x}{v.y}{v.z}$ rechnen, um den Vektor $ \vektor{x_1}{-}{y_1}$ zu erhalten, wobei wir die mittlere Koordinate ignorieren.  
+Wir verwenden $A$, um aus einem $(x,y,z)$ Vektor $\vv{v}$ ein zweidimensionales Koordinatenpaar zu kriegen, indem wir $ A \cdot \vv{v} = \m {2\cdot\frac{\sqrt{5}}{5}}{-\frac{\sqrt{5}}{5}}{0}{\frac{\sqrt{6}}{6}}{\frac{\sqrt{6}}{3}}{-\frac{\sqrt{6}}{6}}{\frac{\sqrt{30}}{30}}{\frac{\sqrt{30}}{15}}{\frac{\sqrt{30}}{6}} \cdot \vektor{v.x}{v.y}{v.z}$ rechnen, um den Vektor $ \vektor{x_1}{-}{y_1}$ zu erhalten, wobei wir die mittlere Koordinate ignorieren (weil in unserer 3D-Welt die $x$-Achse nach rechts, die $z$-Achse nach oben, und die $y$-Achse in die Tiefe zeigt).  
 %\section{Simulation}
 %\subsection{a}
 %\subsection{b}
+\bigskip
 \section{Zusätzliche Abbildungen zu elektrischer Steuerung}
 
 \begin{figure}[h]

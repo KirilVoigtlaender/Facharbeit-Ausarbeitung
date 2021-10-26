@@ -1,5 +1,5 @@
 \section{Programm}
-Wie in der Abbildung \ref{fig:meineSimulation} im Anhang zu sehen ist, werden in der Simulation die Elektronenkanone, die Ablenkspulen und der Bildschirm der Fernseherröhre animiert. 
+Wie in der Abbildung \ref{fig:meineSimulation} im Anhang zu sehen ist, werden in der Simulation die Elektronenkanone, die Ablenkspulen und der Bildschirm der Fernsehröhre animiert. 
 Dabei kann die Spannung der Elektronenkanone gesteuert werden und die Magnetfeldstärke ebenfalls angepasst werden.
 Dadurch wird die Geschwindigkeit der Elektronen des Strahls, die Ablenkung des Strahls und schlussendlich der Auftreffpunkt jeweils dynamisch neu berechnet.
 In den groß dargestellten Kreisen ist die genaue Ablenkung des Strahls durch die einzelnen Ablenkfelder dargestellt, während aufgrund der Bildauflösung am Schnittpunkt $M$ der Magnetfelder diese kreisförmige Ablenkung nicht visualisiert werden kann.   
@@ -149,6 +149,7 @@ for (Ablenkspulenpaar m : getWorld().getObjects(Ablenkspulenpaar.class))
 return ergebnisvektor;
 \end{lstlisting}
 
+Die Umrechnung des dreidimensionalen Ergebnisvektors (und aller anderen verwendeten 3D-Punkte und Vektoren) auf die Bildschirmebene des Programms wird in Anhang \ref{sec:lin} erläutert.
 %\begin{tabular}{c|c|c}
     % Formel Buch & Formel Block & Anmerkungen  \\
      %\hline
